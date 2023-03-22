@@ -1,15 +1,17 @@
 function Navbar() {
   return (
     <>
-      <div className="bg-indigo-500 py-2 px-5">
-        <div className="flex item-center">
-          <p className="text-white min-w-[120px] text-[20px]">ConVoBuzz</p>
+      <div className="bg-blue-b1 py-2 px-5">
+        <div className="flex item-center justify-center">
+          <div className="relative min-w-[120px]">
+            <img className="w-8" src="./images/icons/convobuzz.svg"/>
+          </div>
           <div className="flex justify-between item-center w-[calc(100%_-_120px)]">
             <div className="relative flex iteams-center text-grey w-full md:w-[calc(100%_-_50px)]">
               <div className="relative w-full md:w-auto mx-auto">
                 <input
                   type="text"
-                  className="w-full md:w-[468px] placeholder:text-[#616161] h-8 bg-gray-g1 outline-none p-4 text-[#616161] rounded-md pl-10"
+                  className="w-full md:w-[468px] placeholder:text-[#000000] h-8 bg-gray-g1 outline-none p-4 text-[#000000] rounded-md pl-10"
                   placeholder="Search"
                 />
                 <img
