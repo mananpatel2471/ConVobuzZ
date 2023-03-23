@@ -1,7 +1,7 @@
 function Navbar() {
   return (
     <>
-      <div className="bg-blue-b1 py-2 px-5">
+      <div className="bg-[#6096B4] py-2 px-5">
         <div className="flex item-center justify-center">
           <div className="relative min-w-[120px]">
             <img className="w-8" src="./images/icons/convobuzz.svg"/>
