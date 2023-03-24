@@ -1,0 +1,173 @@
+.Text1{
+  position: absolute;
+  width: 341px;
+  height: 54px;
+  left: 214px;
+  top: 24px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 54px;
+  color: #000000;
+}
+.Text2{
+  position: absolute;
+width: 214px;
+height: 33px;
+left: 401px;
+top: 677px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 33px;
+color: #000000;
+}
+.Text3{
+  position: absolute;
+width: 73px;
+height: 33px;
+left: 624px;
+top: 677px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 33px;
+color: #211EC5;
+
+}
+.Logo{
+  position: absolute;
+  width: 52px;
+  height: 53px;
+  left: 47px;
+  top: 31px;
+}
+.Signup{
+  box-sizing: border-box;
+  position: absolute;
+  padding: 50px,50px, 50px, 50px;
+  width: 700px;
+  height: 727px;
+  left: 600px;
+  right:500px;
+  top: 15%;
+  background: #93BFCF;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  }
+  .Signup-1{
+    position: absolute;
+    width: 522px;
+    height: 50px;
+    left: 149px;
+    top: 154px;
+    background: #E0E0ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  .Signup-2{
+    position: absolute;
+    width: 522px;
+    height: 50px;
+    left: 149px;
+    top: 241px;
+    background: #E0E0ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  .Signup-3{
+    position: absolute;
+    width: 522px;
+    height: 50px;
+    left: 149px;
+    top: 329px;
+    background: #E0E0ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  .Signup-4{
+    position: absolute;
+    width: 522px;
+    height: 50px;
+    left: 149px;
+    top: 417px;
+    background: #E0E0ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  .Signup-5{
+    position: absolute;
+    width: 522px;
+    height: 50px;
+    left: 149px;
+    top: 505px;
+    background: #E0E0ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  .Register{
+    position: absolute;
+    width: 281px;
+    height: 59px;
+    left: 244px;
+    top: 593px;
+    background: #E0E0ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-size: 30px;
+  } 
+  .Register:hover{ background-color: #6096B4;}
+  .Name{
+    
+    position: absolute;
+    left: 11.5%;
+    right: 84.21%;
+    top: 22.42%;
+    bottom: 73.09%;
+    background: #93BFCF;
+  }
+  .Email{
+    position: absolute;
+    left: 11.5%;
+    right: 84.21%;
+    top: 34.39%;
+    bottom: 61.12%;
+    background: #93BFCF;
+  }
+  .Password{
+    position: absolute;
+    left: 11.91%;
+    right: 83.93%;
+    top: 46.63%;
+    bottom: 48.73%;
+    background: #93BFCF;
+  }
+  .Cpassword{
+    position: absolute;
+    width: 37px;
+    height: 34px;
+    left: 82px;
+    top: 425px;
+    background: #93BFCF;
+  }
+  .Mobileno{
+    position: absolute;
+    left: 85.18%;
+    right: 9.83%;
+    top: 81.43%;
+    bottom: 14.31%;    
+    background: #93BFCF;
+  }
+
+  @media screen {
+    
+  }
