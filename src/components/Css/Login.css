@@ -1,0 +1,109 @@
+.Login-1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 700px;
+    height: 467px;
+    left: 35%;
+    top: 15%;
+    
+    background: #93BFCF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    
+}
+.Login-2{
+    position: absolute;
+    width: 481px;
+    height: 52px;
+    left: 142px;
+    top: 161px;
+    
+    background: #E0E0ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-size: 20px;
+}
+.Login-3{
+    position: absolute;
+    width: 481px;
+    height: 48px;
+    left: 142px;
+    top: 251px;
+    
+    background: #E0E0ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-size: 20px;
+}
+.Email{
+    position: absolute;
+    left: 9.29%;
+    right: 86.29%;
+    top: 38.48%;
+    bottom: 54.36%;
+    
+    background: #93BFCF;
+}
+.Password{
+    position: absolute;
+    left: 9.43%;
+    right: 86.29%;
+    top: 56.15%;
+    bottom: 36.47%;
+    
+    background: #93BFCF;
+}
+.Loginbutton{
+    position: absolute;
+    width: 281px;
+    height: 58px;
+    left: 239px;
+    top: 337px;
+
+    background: #E0E0ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-size: 30px;
+}
+.Loginbutton:hover{ background-color: #6096B4;}
+.Logo{
+    position: absolute;
+    width: 91px;
+    height: 86px;
+    left: 318px;
+    top: 27px;
+}
+.Text1{
+    position: absolute;
+    width: 221px;
+    height: 24px;
+    left: 234px;
+    top: 421px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+
+    
+}
+.Text2{
+    position: absolute;
+    width: 75px;
+    height: 24px;
+    left: 422px;
+    top: 421px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #143BC7;
+    
+}

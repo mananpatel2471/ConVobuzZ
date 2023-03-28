@@ -1,11 +1,11 @@
 import React from "react";
-import "../Css.css";
+import "../Css/SignupForm.css";
 const SignupForm = () => {
     return(
     <>
         <div className="Signup"> 
         <div><img className="Logo"
-                   src="./images/icons/ConVobuzZ-logo.svg"/>
+                   src="./images/icons/Convobuzz.svg"/>
         </div>
 
         <div className="Text1">Create an Account</div>
