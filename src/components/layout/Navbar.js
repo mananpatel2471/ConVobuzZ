@@ -11,13 +11,29 @@ function Navbar() {
               <div className="relative w-full md:w-auto mx-auto">
                 <input
                   type="text"
-                  className="w-full md:w-[468px] placeholder:text-[#000000] h-8 bg-gray-g1 outline-none p-4 text-[#000000] rounded-md pl-10"
+                  className="w-full md:w-[468px]  h-8 bg-gray-g1 outline-none p-4 text-[#000000] rounded-md pl-8"
                   placeholder="Search"
                 />
-                <img
-                  className="absolute ml-3 top-1"
-                  src="./images/icons/Search_light.svg"
-                />
+               <svg
+                    className="absolute ml-2 top-1.5 w-5 h-5 "
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="11"
+                      cy="11"
+                      r="7"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M20 20L17 17"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
               </div>
             </div>
             <div className="hidden md:flex items-center ">

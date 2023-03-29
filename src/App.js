@@ -10,7 +10,7 @@ function App() {
     <>
       <Navbar />
       <Sidebar />
-      <div className="sm:flex">
+      <div className="sm:flex ">
         <Chatscreen />
         <Chatpage />
       </div>
