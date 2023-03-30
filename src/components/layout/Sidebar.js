@@ -2,7 +2,7 @@ function Sidebar() {
   return (
     <>
       <div className="flex bg-[#BDCDD6] items-center justify-center ">
-        <div className="flex flex-col   justify-center group items-center px-4  h-full">
+        <div className="flex flex-col justify-center group items-center px-4   h-full">
           <div className="border-b-2 group-hover:border-blue-700 border-transparent  flex gap-2 flex-col items-center justify-between py-2">
             <div>
               <svg

@@ -4,16 +4,22 @@ import Navbar from "./components/layout/Navbar";
 import Sidebar from "./components/layout/Sidebar";
 import Chatscreen from "./components/layout/Chatscreen";
 import Chatpage from "./components/pages/Chatpage";
+import SignupForm from "./components/layout/SignupForm";
+import Login from "./components/layout/Login";
+import VideoPage from "./components/pages/VideoPage";
 
 function App() {
   return (
     <>
-      <Navbar />
+       <Navbar />
       <Sidebar />
-      <div className="sm:flex ">
+      <div className="flex">
         <Chatscreen />
         <Chatpage />
-      </div>
+      </div>  
+       <SignupForm /> 
+       <Login/>     
+       <VideoPage/> 
     </>
   );
 }
