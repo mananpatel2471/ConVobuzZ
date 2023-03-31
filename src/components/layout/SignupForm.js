@@ -63,7 +63,7 @@ const SignupForm = () => {
           <div className="flex justify-center items-center py-3 ">
             <button
               type="submit"
-              className=" text-lg w-[200px] h-[40px] bg-[#e0e0ed] rounded-xl hover:bg-[#6096B4]"
+              className=" text-xl w-[200px] h-[40px] bg-[#e0e0ed] rounded-xl hover:bg-[#6096B4]"
             >
              Register
             </button>

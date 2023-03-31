@@ -3,7 +3,7 @@ import React from "react";
 const Login = () => {
   return (
     <div className="flex justify-center items-center pt-32 p-4">
-      <div className=" w-full sm:w-[680px] bg-[#93bfcf] mx-auto rounded-xl p-5">
+      <div className=" w-full sm:w-[600px] bg-[#93bfcf] mx-auto rounded-xl p-5">
         <div className="flex justify-center items-center">
           <img
             className="w-[100px] h-[100px]"
@@ -46,10 +46,10 @@ const Login = () => {
             </a>
           </div>
 
-          <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center py-2 ">
             <button
               type="submit"
-              className=" text-lg w-[200px] h-[40px] bg-[#e0e0ed] rounded-xl hover:bg-[#6096B4]"
+              className=" text-xl w-[200px] h-[40px] bg-[#e0e0ed] rounded-xl hover:bg-[#6096B4]"
             >
               Login
             </button>

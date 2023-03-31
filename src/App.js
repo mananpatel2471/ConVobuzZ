@@ -16,10 +16,10 @@ function App() {
       <div className="flex">
         <Chatscreen />
         <Chatpage />
-      </div>  
-       {/* <SignupForm /> 
-       <Login/>     
-       <VideoPage/>  */}
+      </div>   
+        <SignupForm /> 
+       <Login/>      
+       <VideoPage/> 
     </>
   );
 }
