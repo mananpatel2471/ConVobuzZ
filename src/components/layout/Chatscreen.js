@@ -120,6 +120,7 @@ function Chatscreen() {
                                 <div>
                                     <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
                                 </div>
+                                
                                 <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
                                     <div className="flex items-bottom justify-between">
                                         <p className="text-grey-darkest">

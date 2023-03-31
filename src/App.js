@@ -17,9 +17,9 @@ function App() {
         <Chatscreen />
         <Chatpage />
       </div>  
-       <SignupForm /> 
+       {/* <SignupForm /> 
        <Login/>     
-       <VideoPage/> 
+       <VideoPage/>  */}
     </>
   );
 }
