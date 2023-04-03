@@ -1,6 +1,9 @@
+
 import React from "react";
 
 const SignupForm = () => {
+
+ 
   return (
     <div className="flex justify-center items-center pt-16 p-4">
       <div className=" w-full sm:w-[600px] bg-[#93bfcf] mx-auto rounded-xl p-4">
@@ -11,7 +14,7 @@ const SignupForm = () => {
           />
         </div>
         <h3 className="text-3xl  flex justify-center items-center">Create an Account</h3>
-        <form>
+        <form >
           <div className="flex justify-center items-center py-2">
             <img src="./images/icons/Name.svg" />
             <input
@@ -78,6 +81,6 @@ const SignupForm = () => {
         </form>
       </div>
     </div>
-      );
-    };
+      )
+    }
 export default SignupForm;

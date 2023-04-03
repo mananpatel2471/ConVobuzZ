@@ -1,7 +1,7 @@
 function Chatscreen() {
   return (
     <>
-      <div className=" w-1/3 flex flex-col border  h-[calc(100vh_-_115px)]">
+      <div className=" w-1/3  flex flex-col border  h-[calc(100vh_-_115px)]">
         <div className="py-2 px-3 bg-[#BDCDD6]  flex flex-row justify-between items-center">
           <div className="flex-1">
             <span className=" text-[25px] text-black ">Chats</span>
