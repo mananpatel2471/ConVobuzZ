@@ -13,13 +13,13 @@ function App() {
     <>
        <Navbar />
       <Sidebar />
-      <div className="flex">
+      {/* <div className="flex">
         <Chatscreen />
         <Chatpage />
-      </div>   
+      </div>    */}
         <SignupForm /> 
        <Login/>      
-       <VideoPage/> 
+       {/* <VideoPage/>  */}
     </>
   );
 }
