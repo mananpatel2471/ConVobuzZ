@@ -13,9 +13,10 @@ import Landingpage from "./components/pages/landingpage";
 function App() {
   return (
     <>
+
       <Landingpage />
-       {/* <Navbar />
-      <Sidebar /> */}
+        {/* <Navbar />
+      <Sidebar />  */}
       {/* <div className="flex">
         <Chatscreen />
         <Chatpage />
@@ -25,6 +26,7 @@ function App() {
         
        {/* <LoriRoutes />    */}
        
+
     </>
   );
 }

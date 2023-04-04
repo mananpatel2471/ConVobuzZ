@@ -1,6 +1,6 @@
 import React  from "react";
 import Login from "../layout/Login";
-import { Link } from "react-router-dom";
+
 const Landingpage = () =>{
 
     const handleClick = (event) => {
@@ -20,13 +20,11 @@ const Landingpage = () =>{
                
               </div>
               <div className="hidden md:flex items-center ">
-              <Link to="/login">
-                    submit
-              </Link>
+              
                 <button 
                     type= "submit"
                     className="text-lg w-[134px] h-[38px] bg-[#BDCDD6] rounded-xl hover:bg-[#9FCFEB] shadow-xl"
-                    onClick={() => {<Login />}}>Signin</button>
+                    >Signin</button>
               </div>
             </div>
           </div>
