@@ -1,5 +1,6 @@
 import React, {Component, useState} from "react";
 import {useForm} from "react-hook-form";
+import {Link} from "react-router-dom";
 
 const Login = () => {
 
@@ -12,9 +13,10 @@ const Login = () => {
     handleSubmit,
   } = useForm();
 
-  const onSubmit = (event) => {
+  const onSubmit = (form, event) => {
     event.preventDefault();
     console.log(email, password);
+    window.location.replace("/chat");
   };
 
   return (
@@ -80,9 +82,9 @@ const Login = () => {
 
           <p className="flex justify-center items-center ">
             Don't have an account?
-            <a href="/signup" className="ml-1 text-blue-800">
+            <Link to="/signup" className="ml-1 text-blue-800">
               Sign Up
-            </a>
+            </Link>
           </p>
         </form>
       </div>

@@ -1,17 +1,22 @@
 import React, {Component, useState} from "react";
 import {useForm} from "react-hook-form";
+import {Link} from "react-router-dom";
+import axios from 'axios';
+import config from "../../config/default";
+import {setErrorState} from "../../state/global";
+import { useNavigate } from 'react-router-dom';
 
 const SignupForm = () => {
 
-
+  const SERVER_URL = config.SERVER_URL;
   const [uname, setUname] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmpassword, setConfirmpassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [mobileno, setMobileno] = useState("");
 
-
+  const navigate = useNavigate();
   const {
     register,
     formState: {errors},
@@ -19,10 +24,25 @@ const SignupForm = () => {
 
   } = useForm();
 
-  const onSubmit = (event) => {
+  const onSubmit = (form, event) => {
     event.preventDefault();
-    console.log(uname, email, password, confirmpassword, mobileno);
-    console.log(username, email, password, confirmpassword, mobileno);
+    const data = {
+      name: uname,
+      email,
+      password,
+      mobile: mobileno
+    }
+    axios.post(SERVER_URL + "/api/register", data)
+      .then((res) => {
+        console.log(res)
+      })
+      .catch((err => {
+        const code=err.response.status;
+        const { error, description, trace} = err.response.data;
+        setErrorState(code, error, description, trace);
+        console.log(err)
+        navigate('/error');
+      }))
   };
 
 
@@ -51,10 +71,10 @@ const SignupForm = () => {
               onChange={(event) => setUname(event.target.value)}
             />
           </div>
-          <lable className="ml-12 text-red-600">
+          <label className="ml-12 text-red-600">
             {errors.Username?.type === "required" && "Username is Required!"}
             {errors.Username?.type === "maxLength" && "Username cannot exceed 20 characters"}
-          </lable>
+          </label>
 
 
           <div className="flex justify-center items-center py-1">
@@ -68,10 +88,10 @@ const SignupForm = () => {
             />
           </div>
 
-          <lable className="ml-12 text-red-600 ">
+          <label className="ml-12 text-red-600 ">
             {errors.email?.type === "required" && "Email is Required!"}
             {errors.email?.type === "pattern" && "Inval Email."}
-          </lable>
+          </label>
 
 
           <div className="flex justify-center items-center py-1">
@@ -103,7 +123,7 @@ const SignupForm = () => {
               type="password"
               className="ml-5 bg-[#e0e0ed] outline-none w-full h-[40px] rounded-2xl pl-5"
               placeholder="Enter Confirm Password*"
-              onChange={(event) => setConfirmpassword(event.target.value)}
+              onChange={(event) => setConfirmPassword(event.target.value)}
             />
           </div>
           <label className="ml-12 text-red-600">
@@ -122,11 +142,11 @@ const SignupForm = () => {
               onChange={(event) => setMobileno(event.target.value)}
             />
           </div>
-          <lable className="ml-12 text-red-600">
+          <label className="ml-12 text-red-600">
             {errors.mobileno?.type === "required" && "MobileNumber is Required!"}
             {errors.mobileno?.type === "pattern" && "Number Only"}
             {errors.mobileno?.type === "maxLength" && "Invalid MobileNumber."}
-          </lable>
+          </label>
 
 
           <div className="flex justify-center items-center py-3 ">
@@ -139,9 +159,9 @@ const SignupForm = () => {
 
           <p className="flex justify-center items-center ">
             Already Registered?
-            <a href="/login" className="ml-1 text-blue-800">
+            <Link to="/login" className="ml-1 text-blue-800">
               Sign In
-            </a>
+            </Link>
           </p>
         </form>
       </div>

@@ -132,4 +132,4 @@ dist
 # idea files
 .idea
 # configurations
-config
+src/config
