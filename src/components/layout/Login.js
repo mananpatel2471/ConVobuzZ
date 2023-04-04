@@ -3,13 +3,12 @@ import {useForm} from "react-hook-form";
 import {Link} from "react-router-dom";
 
 const Login = () => {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const {
     register,
-    formState: {errors},
+    formState: { errors },
     handleSubmit,
   } = useForm();
 
@@ -20,7 +19,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center pt-32 p-4">
+    <div className="flex justify-center items-center pt-24 p-4">
       <div className=" w-full sm:w-[600px] bg-[#93bfcf] mx-auto rounded-xl p-5">
         <div className="flex justify-center items-center">
           <img
@@ -30,30 +29,42 @@ const Login = () => {
         </div>
         <h3 className="text-3xl  flex justify-center items-center">Sign In</h3>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex justify-center items-center py-4">
-            <img src="./images/icons/Email.svg"/>
+          <div className="flex justify-center items-center py-2">
+            <img src="./images/icons/Email.svg" />
             <input
-              {...register("email", {required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,})}
+              {...register("email", {
+                required: true,
+                pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+              })}
               type="email"
               className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
               placeholder="Enter email"
               onChange={(event) => setEmail(event.target.value)}
             />
-            <label>
-              {errors.email?.type === "required" && "Email is Required"}
-              {errors.email?.type === "pattern" && "Inval Email."}
-            </label>
           </div>
+          <label className="ml-12 text-red-600">
+            {errors.email?.type === "required" && "Email is Required"}
+            {errors.email?.type === "pattern" && "Inval Email."}
+          </label>
 
           <div className="flex justify-center items-center py-1">
-            <img src="./images/icons/Password.svg"/>
+            <img src="./images/icons/Password.svg" />
             <input
+              {...register("Password", {
+                required: true,
+                pattern:
+                  "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8}$",
+              })}
               type="password"
               className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
               placeholder="Enter password"
               onChange={(event) => setPassword(event.target.value)}
             />
           </div>
+          <label className="ml-12 text-red-600">
+            {errors.Password?.type === "required" && "Password is Required!"}
+            {errors.Password?.type === "pattern" && "One Uppercase and lowercase letter, and at least 8 characters"}
+          </label>
 
           <div className=" flex items-center justify-between ">
             <div className=" sm:pl-16 ">
