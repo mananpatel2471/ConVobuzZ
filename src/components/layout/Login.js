@@ -26,30 +26,37 @@ const Login = () => {
         </div>
         <h3 className="text-3xl  flex justify-center items-center">Sign In</h3>
         <form onSubmit = {handleSubmit(onSubmit)}>
-          <div className="flex justify-center items-center py-4">
+          <div className="flex justify-center items-center py-2">
             <img src="./images/icons/Email.svg" />
             <input
              {...register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, })}
               type="email"
-              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
+              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[40px] rounded-2xl pl-5"
               placeholder="Enter email"
               onChange={(event) => setEmail(event.target.value)}
             />
-            <lable>
-                {errors.email?.type === "required" && "Email is Required"}
+          </div>
+          <lable className="ml-12 text-red-600">
+                {errors.email?.type === "required" && "Email is Required!"}
                 {errors.email?.type === "pattern" && "Inval Email."}
             </lable>
-          </div>
 
           <div className="flex justify-center items-center py-1">
             <img src="./images/icons/Password.svg" />
             <input
+             {...register("Password", { required: true, pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8}$", })}
               type="password"
-              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
+              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[40px] rounded-2xl pl-5"
               placeholder="Enter password"
               onChange={(event) => setPassword(event.target.value)}
             />
           </div>
+
+          <label className="ml-12 text-red-600">
+                {errors.Password?.type === "required" && "Password is Required!"}
+                {errors.Password?.type === "pattern" && "One Uppercase and lowercase letter, and at least 8 characters"}
+          </label>
+
 
           <div className=" flex items-center justify-between ">
             <div className=" sm:pl-16 ">
@@ -57,17 +64,18 @@ const Login = () => {
                 className="relative  "
                 type="checkbox"
                 id="exampleCheck3"
-              />
+              /> 
               <label className="inline-block ml-1 " for="exampleCheck3">
                 Remember me
               </label>
+              
             </div>
             <a href="" className=" text-blue-800 sm:mr-3">
               Forgot password?
             </a>
           </div>
 
-          <div className="flex justify-center items-center py-2 ">
+          <div className="flex justify-center items-center py-4 ">
             <button
               type="submit"
               className=" text-xl w-[200px] h-[40px] bg-[#e0e0ed] rounded-xl hover:bg-[#6096B4]"
