@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import SignupForm from "./components/layout/SignupForm";
-import Login from "./components/layout/Login";
+import SignupForm from "../components/layout/SignupForm";
+import Login from "../components/layout/Login";
 
-const loriRoutes = () => {
+const LoriRoutes = () => {
     return (
         <Router>
           <div>
@@ -18,4 +18,4 @@ const loriRoutes = () => {
         </Router>
       );
 }
-export default loriRoutes;
+export default LoriRoutes;

@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import { useForm } from "react-hook-form";
-const Login = () => {
+const Login = (props) => {
   
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
