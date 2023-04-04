@@ -13,20 +13,14 @@ import Landingpage from "./components/pages/landingpage";
 function App() {
   return (
     <>
-
-      <Landingpage />
-        {/* <Navbar />
+      <Landingpage/>
+      {/* <Navbar />
       <Sidebar />  */}
       {/* <div className="flex">
         <Chatscreen />
         <Chatpage />
        </div>   */}
-          
-      
-        
-       {/* <LoriRoutes />    */}
-       
-
+      {/* <LoriRoutes />    */}
     </>
   );
 }

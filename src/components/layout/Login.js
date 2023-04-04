@@ -1,14 +1,16 @@
-import React, { Component, useState } from "react";
-import { useForm } from "react-hook-form";
+import React, {Component, useState} from "react";
+import {useForm} from "react-hook-form";
+
 const Login = () => {
-  
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const {
     register,
-    formState: { errors },
-    handleSubmit,}   = useForm();
+    formState: {errors},
+    handleSubmit,
+  } = useForm();
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -25,24 +27,24 @@ const Login = () => {
           />
         </div>
         <h3 className="text-3xl  flex justify-center items-center">Sign In</h3>
-        <form onSubmit = {handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex justify-center items-center py-4">
-            <img src="./images/icons/Email.svg" />
+            <img src="./images/icons/Email.svg"/>
             <input
-             {...register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, })}
+              {...register("email", {required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,})}
               type="email"
               className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
               placeholder="Enter email"
               onChange={(event) => setEmail(event.target.value)}
             />
             <lable>
-                {errors.email?.type === "required" && "Email is Required"}
-                {errors.email?.type === "pattern" && "Inval Email."}
+              {errors.email?.type === "required" && "Email is Required"}
+              {errors.email?.type === "pattern" && "Inval Email."}
             </lable>
           </div>
 
           <div className="flex justify-center items-center py-1">
-            <img src="./images/icons/Password.svg" />
+            <img src="./images/icons/Password.svg"/>
             <input
               type="password"
               className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"

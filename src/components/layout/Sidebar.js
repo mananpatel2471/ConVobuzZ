@@ -3,7 +3,8 @@ function Sidebar() {
     <>
       <div className="flex bg-[#BDCDD6] items-center justify-center ">
         <div className="flex flex-col justify-center group items-center px-4   h-full">
-          <div className="border-b-2 group-hover:border-blue-700 border-transparent  flex gap-2 flex-col items-center justify-between py-2">
+          <div
+            className="border-b-2 group-hover:border-blue-700 border-transparent  flex gap-2 flex-col items-center justify-between py-2">
             <div>
               <svg
                 className="h-5 w-6 group-hover:text-blue-700 "
@@ -24,7 +25,8 @@ function Sidebar() {
         </div>
 
         <div className="flex flex-col  justify-center group items-center px-4  h-full  ">
-          <div className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
+          <div
+            className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
             <div>
               <svg
                 className="h-5 w-6 group-hover:text-blue-700 "
@@ -43,7 +45,8 @@ function Sidebar() {
         </div>
 
         <div className="flex flex-col ml-1 justify-center group items-center px-4  h-full  ">
-          <div className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
+          <div
+            className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
             <div>
               <svg
                 className="h-5 w-6 group-hover:text-blue-700 "
@@ -62,7 +65,8 @@ function Sidebar() {
         </div>
 
         <div className="flex flex-col  justify-center group items-center px-4  h-full  ">
-          <div className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
+          <div
+            className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
             <div>
               <svg
                 className="h-5 w-6 group-hover:text-blue-700 "
@@ -73,7 +77,7 @@ function Sidebar() {
                 <path
                   d="M19.7274 20.4471C19.2716 19.1713 18.2672 18.0439 16.8701 17.2399C15.4729 16.4358 13.7611 16 12 16C10.2389 16 8.52706 16.4358 7.12991 17.2399C5.73276 18.0439 4.72839 19.1713 4.27259 20.4471"
                   stroke="#222222"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   fill="currentColor"
                 />
                 <circle
@@ -81,7 +85,7 @@ function Sidebar() {
                   cy="8"
                   r="4"
                   stroke="#222222"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                 />
               </svg>
             </div>
@@ -92,7 +96,8 @@ function Sidebar() {
         </div>
 
         <div className="flex flex-col  justify-center group items-center px-4  h-full  ">
-          <div className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
+          <div
+            className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
             <div>
               <svg
                 className="h-5 w-6 group-hover:text-blue-700"
@@ -114,7 +119,7 @@ function Sidebar() {
                   />
                 </mask>
                 <g mask="url(#mask0_9523_235350)">
-                  <rect x="0.0625" width="20" height="20" fill="currentColor" />
+                  <rect x="0.0625" width="20" height="20" fill="currentColor"/>
                 </g>
               </svg>
             </div>
@@ -125,7 +130,8 @@ function Sidebar() {
         </div>
 
         <div className="flex flex-col  justify-center group items-center px-4  h-full  ">
-          <div className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
+          <div
+            className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
             <div>
               <svg
                 className="h-5 w-6 group-hover:text-blue-700"
@@ -138,22 +144,22 @@ function Sidebar() {
                   fill="currentColor"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M2 18C2 19.8856 2 20.8284 2.58579 21.4142C3.17157 22 4.11438 22 6 22H18C19.8856 22 20.8284 22 21.4142 21.4142C22 20.8284 22 19.8856 22 18V13C22 12.5286 22 12.2929 21.8536 12.1464C21.7071 12 21.4714 12 21 12H3C2.5286 12 2.29289 12 2.14645 12.1464C2 12.2929 2 12.5286 2 13V18ZM7 15C7 14.5286 7 14.2929 7.14645 14.1464C7.29289 14 7.5286 14 8 14H10C10.4714 14 10.7071 14 10.8536 14.1464C11 14.2929 11 14.5286 11 15C11 15.4714 11 15.7071 10.8536 15.8536C10.7071 16 10.4714 16 10 16H8C7.5286 16 7.29289 16 7.14645 15.8536C7 15.7071 7 15.4714 7 15ZM7.14645 18.1464C7 18.2929 7 18.5286 7 19C7 19.4714 7 19.7071 7.14645 19.8536C7.29289 20 7.5286 20 8 20H10C10.4714 20 10.7071 20 10.8536 19.8536C11 19.7071 11 19.4714 11 19C11 18.5286 11 18.2929 10.8536 18.1464C10.7071 18 10.4714 18 10 18H8C7.5286 18 7.29289 18 7.14645 18.1464ZM13 15C13 14.5286 13 14.2929 13.1464 14.1464C13.2929 14 13.5286 14 14 14H16C16.4714 14 16.7071 14 16.8536 14.1464C17 14.2929 17 14.5286 17 15C17 15.4714 17 15.7071 16.8536 15.8536C16.7071 16 16.4714 16 16 16H14C13.5286 16 13.2929 16 13.1464 15.8536C13 15.7071 13 15.4714 13 15ZM13.1464 18.1464C13 18.2929 13 18.5286 13 19C13 19.4714 13 19.7071 13.1464 19.8536C13.2929 20 13.5286 20 14 20H16C16.4714 20 16.7071 20 16.8536 19.8536C17 19.7071 17 19.4714 17 19C17 18.5286 17 18.2929 16.8536 18.1464C16.7071 18 16.4714 18 16 18H14C13.5286 18 13.2929 18 13.1464 18.1464Z"
                   fill="currentColor"
                 />
                 <path
                   d="M7 3L7 6"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M17 3L17 6"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
               </svg>
             </div>
