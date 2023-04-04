@@ -8,23 +8,23 @@ import SignupForm from "./components/layout/SignupForm";
 import Login from "./components/layout/Login";
 import VideoPage from "./components/pages/VideoPage";
 import LoriRoutes from "./Routes/LoriRoutes";
-import Landingpage from "./components/pages/landingpage";
+import Landingpage from "./components/pages/Landingpage";
 
 function App() {
   return (
     <>
 
-      <Landingpage />
-        {/* <Navbar />
-      <Sidebar />  */}
-      {/* <div className="flex">
+      <Landingpage /> 
+       {/* <Navbar />
+      <Sidebar />  
+       <div className="flex">
         <Chatscreen />
         <Chatpage />
        </div>   */}
           
       
         
-       {/* <LoriRoutes />    */}
+       <LoriRoutes />   
        
 
     </>

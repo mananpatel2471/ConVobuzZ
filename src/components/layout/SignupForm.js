@@ -1,11 +1,10 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const SignupForm = () => {
  
 
   const [uname, setUname] = useState("");
-  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmpassword, setConfirmpassword] = useState("");
@@ -23,13 +22,13 @@ const SignupForm = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     console.log(uname, email, password, confirmpassword, mobileno);
-    console.log(username, email, password, confirmpassword, mobileno);
+    console.log(uname, email, password, confirmpassword, mobileno);
   };
 
 
   return (
 
-    <div className="flex justify-center items-center pt-16 p-4">
+    <div className="flex justify-center items-center pt-16 p-1">
       <div className=" w-full sm:w-[600px] bg-[#93bfcf] mx-auto rounded-xl p-4">
         <div className="flex justify-center items-center">
           <img
