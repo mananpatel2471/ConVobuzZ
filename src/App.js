@@ -7,19 +7,26 @@ import Chatpage from "./components/pages/Chatpage";
 import SignupForm from "./components/layout/SignupForm";
 import Login from "./components/layout/Login";
 import VideoPage from "./components/pages/VideoPage";
+import LoriRoutes from "./Routes/LoriRoutes";
+import Landingpage from "./components/pages/landingpage";
 
 function App() {
   return (
     <>
-       <Navbar />
-      <Sidebar />
-      <div className="flex">
+
+      <Landingpage />
+        {/* <Navbar />
+      <Sidebar />  */}
+      {/* <div className="flex">
         <Chatscreen />
         <Chatpage />
-       </div>   
-        <SignupForm /> 
-       <Login/>      
-       <VideoPage/> 
+       </div>   */}
+          
+      
+        
+       {/* <LoriRoutes />    */}
+       
+
     </>
   );
 }
