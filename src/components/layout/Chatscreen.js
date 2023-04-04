@@ -141,7 +141,7 @@ function Chatscreen() {
                                 <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
                                     <div className="flex items-bottom justify-between">
                                         <p className="text-grey-darkest">
-                                            Ram
+                                            Rishita patel
                                         </p>
                                         <p className="text-xs text-grey-darkest">
                                             12:45 pm

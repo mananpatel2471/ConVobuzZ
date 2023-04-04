@@ -1,6 +1,15 @@
-import React from "react";
+import React, { Component, useState } from "react";
 
 const Login = () => {
+  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(email, password);
+  }
+
   return (
     <div className="flex justify-center items-center pt-32 p-4">
       <div className=" w-full sm:w-[600px] bg-[#93bfcf] mx-auto rounded-xl p-5">
@@ -11,13 +20,14 @@ const Login = () => {
           />
         </div>
         <h3 className="text-3xl  flex justify-center items-center">Sign In</h3>
-        <form>
+        <form onSubmit = {handleSubmit}>
           <div className="flex justify-center items-center py-4">
             <img src="./images/icons/Email.svg" />
             <input
               type="email"
               className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
               placeholder="Enter email"
+              onChange={(event) => setEmail(event.target.value)}
             />
           </div>
 
@@ -27,6 +37,7 @@ const Login = () => {
               type="password"
               className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
               placeholder="Enter password"
+              onChange={(event) => setPassword(event.target.value)}
             />
           </div>
 
@@ -57,7 +68,7 @@ const Login = () => {
 
           <p className="flex justify-center items-center ">
             Don't have an account?
-            <a href="" className="ml-1 text-blue-800">
+            <a href="/signup" className="ml-1 text-blue-800">
               Sign Up
             </a>
           </p>

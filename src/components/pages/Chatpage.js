@@ -8,7 +8,7 @@ function Chatpage() {
              <img className=" w-10 h-10 rounded-full " src="./images/icons/avatar.svg"/>
             </div>
             <div className="ml-4">
-              <p className="text-grey-darkest">Manan Patel</p>
+              <p className="text-grey-darkest">User Name</p>
             </div>
           </div>
 
@@ -88,7 +88,7 @@ function Chatpage() {
             
             <div className="flex mb-2">
               <div className="rounded py-2 px-3 bg-[#F2F2F2]">
-                <p className="text-sm text-teal text-green-400">Manan Patel</p>
+                <p className="text-sm text-teal text-green-400">User Name</p>
                 <p className="text-sm mt-1">Hii</p>
                 <p className="text-right text-xs text-grey-dark mt-1">
                   12:45 pm
@@ -107,7 +107,7 @@ function Chatpage() {
 
             <div className="flex mb-2">
               <div className="rounded py-2 px-3 bg-[#F2F2F2]">
-                <p className="text-sm text-teal text-green-400">Manan Patel</p>
+                <p className="text-sm text-teal text-green-400">User Name</p>
                 <p className="text-sm mt-1">Hii</p>
                 <p className="text-right text-xs text-grey-dark mt-1">
                   12:45 pm
@@ -117,7 +117,7 @@ function Chatpage() {
 
             <div className="flex mb-2">
               <div className="rounded py-2 px-3 bg-[#F2F2F2]">
-                <p className="text-sm text-teal text-green-400">Manan Patel</p>
+                <p className="text-sm text-teal text-green-400">User Name</p>
                 <p className="text-sm mt-1">Hii</p>
                 <p className="text-right text-xs text-grey-dark mt-1">
                   12:45 pm
@@ -127,7 +127,7 @@ function Chatpage() {
 
             <div className="flex mb-2">
               <div className="rounded py-2 px-3 bg-[#F2F2F2]">
-                <p className="text-sm text-teal text-green-400">Manan Patel</p>
+                <p className="text-sm text-teal text-green-400">User Name</p>
                 <p className="text-sm mt-1">Hii</p>
                 <p className="text-right text-xs text-grey-dark mt-1">
                   12:45 pm
@@ -137,7 +137,7 @@ function Chatpage() {
 
             <div className="flex mb-2">
               <div className="rounded py-2 px-3 bg-[#F2F2F2]">
-                <p className="text-sm text-teal text-green-400">Manan Patel</p>
+                <p className="text-sm text-teal text-green-400">User Name</p>
                 <p className="text-sm mt-1">Hii</p>
                 <p className="text-right text-xs text-grey-dark mt-1">
                   12:45 pm
@@ -147,7 +147,7 @@ function Chatpage() {
 
             <div className="flex mb-2">
               <div className="rounded py-2 px-3 bg-[#F2F2F2]">
-                <p className="text-sm text-teal text-green-400">Manan Patel</p>
+                <p className="text-sm text-teal text-green-400">User Name</p>
                 <p className="text-sm mt-1">Hii</p>
                 <p className="text-right text-xs text-grey-dark mt-1">
                   12:45 pm
@@ -157,7 +157,7 @@ function Chatpage() {
 
             <div className="flex mb-2">
               <div className="rounded py-2 px-3 bg-[#F2F2F2]">
-                <p className="text-sm text-teal text-green-400">Manan Patel</p>
+                <p className="text-sm text-teal text-green-400">User Name</p>
                 <p className="text-sm mt-1">Hii</p>
                 <p className="text-right text-xs text-grey-dark mt-1">
                   12:45 pm
@@ -167,7 +167,7 @@ function Chatpage() {
 
             <div className="flex mb-2">
               <div className="rounded py-2 px-3 bg-[#F2F2F2]">
-                <p className="text-sm text-teal text-green-400">Manan Patel</p>
+                <p className="text-sm text-teal text-green-400">User Name</p>
                 <p className="text-sm mt-1">Hii</p>
                 <p className="text-right text-xs text-grey-dark mt-1">
                   12:45 pm
@@ -177,7 +177,7 @@ function Chatpage() {
 
             <div className="flex mb-2">
               <div className="rounded py-2 px-3 bg-[#F2F2F2]">
-                <p className="text-sm text-teal text-green-400">Manan Patel</p>
+                <p className="text-sm text-teal text-green-400">User Name</p>
                 <p className="text-sm mt-1">Hii</p>
                 <p className="text-right text-xs text-grey-dark mt-1">
                   12:45 pm
@@ -187,7 +187,7 @@ function Chatpage() {
 
             <div className="flex mb-2">
               <div className="rounded py-2 px-3 bg-[#F2F2F2]">
-                <p className="text-sm text-teal text-green-400">Manan Patel</p>
+                <p className="text-sm text-teal text-green-400">User Name</p>
                 <p className="text-sm mt-1">Hii</p>
                 <p className="text-right text-xs text-grey-dark mt-1">
                   12:45 pm
@@ -198,7 +198,7 @@ function Chatpage() {
 
             <div className="flex mb-2">
               <div className="rounded py-2 px-3 bg-[#F2F2F2]">
-                <p className="text-sm text-teal text-green-400">Manan Patel</p>
+                <p className="text-sm text-teal text-green-400">User Name</p>
                 <p className="text-sm mt-1">Hii</p>
                 <p className="text-right text-xs text-grey-dark mt-1">
                   12:45 pm
