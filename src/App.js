@@ -7,13 +7,13 @@ import Chatpage from "./components/pages/Chatpage";
 import SignupForm from "./components/layout/SignupForm";
 import Login from "./components/layout/Login";
 import VideoPage from "./components/pages/VideoPage";
-import LoriRoutes from "./Routes/LoriRoutes";
+import LoriRoutes from "./Routes/loriRoutes";
 import Landingpage from "./components/pages/landingpage";
 
 function App() {
   return (
     <>
-      <Landingpage/>
+      <LoriRoutes/>
       {/* <Navbar />
       <Sidebar />  */}
       {/* <div className="flex">

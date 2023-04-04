@@ -39,24 +39,24 @@ function Chatscreen() {
                     cy="12"
                     r="1"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                   <circle
                     cx="6"
                     cy="12"
                     r="1"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                   <circle
                     cx="18"
                     cy="12"
                     r="1"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                 </svg>
               </button>
@@ -80,13 +80,13 @@ function Chatscreen() {
                       cy="11"
                       r="7"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth="2"
                     />
                     <path
                       d="M20 20L17 17"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
                     />
                   </svg>
                 </button>

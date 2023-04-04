@@ -2,6 +2,7 @@ import React from "react";
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import SignupForm from "../components/layout/SignupForm";
 import Login from "../components/layout/Login";
+import Landingpage from "../components/pages/landingpage";
 
 const LoriRoutes = () => {
   return (
@@ -9,7 +10,7 @@ const LoriRoutes = () => {
       <div>
         <Routes>
           <Route
-            exact path="/"
+            exact path="/" element={<Landingpage/>}
           />
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<SignupForm/>}/>

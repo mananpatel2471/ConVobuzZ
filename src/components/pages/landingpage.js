@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "../layout/Login";
+import {Link} from "react-router-dom";
 
 const Landingpage = () => {
 
@@ -20,12 +21,14 @@ const Landingpage = () => {
 
             </div>
             <div className="hidden md:flex items-center ">
+              <Link to="/login">
+                <button
+                  type="submit"
+                  className="text-lg w-[134px] h-[38px] bg-[#BDCDD6] rounded-xl hover:bg-[#9FCFEB] shadow-xl"
+                >Signin
+                </button>
+              </Link>
 
-              <button
-                type="submit"
-                className="text-lg w-[134px] h-[38px] bg-[#BDCDD6] rounded-xl hover:bg-[#9FCFEB] shadow-xl"
-              >Signin
-              </button>
             </div>
           </div>
         </div>

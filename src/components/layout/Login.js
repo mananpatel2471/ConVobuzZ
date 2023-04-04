@@ -37,10 +37,10 @@ const Login = () => {
               placeholder="Enter email"
               onChange={(event) => setEmail(event.target.value)}
             />
-            <lable>
+            <label>
               {errors.email?.type === "required" && "Email is Required"}
               {errors.email?.type === "pattern" && "Inval Email."}
-            </lable>
+            </label>
           </div>
 
           <div className="flex justify-center items-center py-1">
@@ -60,7 +60,7 @@ const Login = () => {
                 type="checkbox"
                 id="exampleCheck3"
               />
-              <label className="inline-block ml-1 " for="exampleCheck3">
+              <label className="inline-block ml-1 " htmlFor="exampleCheck3">
                 Remember me
               </label>
             </div>
