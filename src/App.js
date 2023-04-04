@@ -16,7 +16,7 @@ function App() {
       {/* <div className="flex">
         <Chatscreen />
         <Chatpage />
-      </div>    */}
+       </div>    */}
         <SignupForm /> 
        <Login/>      
        {/* <VideoPage/>  */}
