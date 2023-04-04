@@ -1,9 +1,6 @@
-import React  from "react";
+import React from "react";
 
-
-const Landingpage = () =>{
-
-  
+const Landingpage = () => { 
     
     return (
       <>
@@ -13,8 +10,6 @@ const Landingpage = () =>{
               <img className="w-12" src="./images/icons/convobuzz.svg"/>
             </div>
             <div className="flex justify-center item-center w-[calc(100%_-_120px)]">
-              
-                
                  <p className= "text-4xl text-[#303B69] ">ConVoBuzZ</p>
                
               </div>
@@ -28,11 +23,12 @@ const Landingpage = () =>{
               
               </div>
             </div>
-          </div>
-        
-      </>
-    );
-  }
-  
-  export default Landingpage;
+            </div>
+                
+    </>
+  );
+}
+
+export default Landingpage;
+
   

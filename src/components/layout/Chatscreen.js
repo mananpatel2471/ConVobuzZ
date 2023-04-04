@@ -9,7 +9,8 @@ function Chatscreen() {
 
           <div className="flex ">
             <div>
-              <button className="flex  p-2 top-2 rounded-xl text-black hover:bg-gray-300 dark:hover:text-gray-400 dark:hover:bg-gray-900 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent">
+              <button
+                className="flex  p-2 top-2 rounded-xl text-black hover:bg-gray-300 dark:hover:text-gray-400 dark:hover:bg-gray-900 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent">
                 <svg
                   className="inline  w-6 h-6 "
                   viewBox="0 0 16 16"
@@ -25,7 +26,8 @@ function Chatscreen() {
             </div>
 
             <div>
-              <button className="flex  p-2 top-2 rounded-xl text-black hover:bg-gray-300 dark:hover:text-gray-400 dark:hover:bg-gray-900 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent">
+              <button
+                className="flex  p-2 top-2 rounded-xl text-black hover:bg-gray-300 dark:hover:text-gray-400 dark:hover:bg-gray-900 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent">
                 <svg
                   className="inline  w-6 h-6"
                   viewBox="0 0 24 24"
@@ -37,24 +39,24 @@ function Chatscreen() {
                     cy="12"
                     r="1"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                   <circle
                     cx="6"
                     cy="12"
                     r="1"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                   <circle
                     cx="18"
                     cy="12"
                     r="1"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                 </svg>
               </button>
@@ -78,13 +80,13 @@ function Chatscreen() {
                       cy="11"
                       r="7"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth="2"
                     />
                     <path
                       d="M20 20L17 17"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
                     />
                   </svg>
                 </button>
@@ -117,153 +119,153 @@ function Chatscreen() {
           </div>
 
           <div className="bg-[#F2EFEF] px-3 flex items-center hover:bg-[#DFEBF2] ">
-                                <div>
-                                    <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
-                                </div>
-                                
-                                <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
-                                    <div className="flex items-bottom justify-between">
-                                        <p className="text-grey-darkest">
-                                           Masum Patel
-                                        </p>
-                                        <p className="text-xs text-grey-darkest">
-                                            12:45 pm
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+            <div>
+              <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
+            </div>
+
+            <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
+              <div className="flex items-bottom justify-between">
+                <p className="text-grey-darkest">
+                  Masum Patel
+                </p>
+                <p className="text-xs text-grey-darkest">
+                  12:45 pm
+                </p>
+              </div>
+            </div>
+          </div>
 
 
-                            <div className="bg-[#F2EFEF] hover:bg-[#DFEBF2] px-3 flex items-center  ">
-                                <div>
-                                    <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
-                                </div>
-                                <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
-                                    <div className="flex items-bottom justify-between">
-                                        <p className="text-grey-darkest">
-                                            Rishita patel
-                                        </p>
-                                        <p className="text-xs text-grey-darkest">
-                                            12:45 pm
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+          <div className="bg-[#F2EFEF] hover:bg-[#DFEBF2] px-3 flex items-center  ">
+            <div>
+              <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
+            </div>
+            <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
+              <div className="flex items-bottom justify-between">
+                <p className="text-grey-darkest">
+                  Rishita patel
+                </p>
+                <p className="text-xs text-grey-darkest">
+                  12:45 pm
+                </p>
+              </div>
+            </div>
+          </div>
 
 
-                            <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2]">
-                                <div>
-                                    <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
-                                </div>
-                                <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
-                                    <div className="flex items-bottom justify-between">
-                                        <p className="text-grey-darkest">
-                                            Patel
-                                        </p>
-                                        <p className="text-xs text-grey-darkest">
-                                            12:45 pm
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+          <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2]">
+            <div>
+              <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
+            </div>
+            <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
+              <div className="flex items-bottom justify-between">
+                <p className="text-grey-darkest">
+                  Patel
+                </p>
+                <p className="text-xs text-grey-darkest">
+                  12:45 pm
+                </p>
+              </div>
+            </div>
+          </div>
 
-                            <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2]">
-                                <div>
-                                    <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
-                                </div>
-                                <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
-                                    <div className="flex items-bottom justify-between">
-                                        <p className="text-grey-darkest">
-                                            Nikunj
-                                        </p>
-                                        <p className="text-xs text-grey-darkest">
-                                            12:45 pm
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+          <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2]">
+            <div>
+              <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
+            </div>
+            <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
+              <div className="flex items-bottom justify-between">
+                <p className="text-grey-darkest">
+                  Nikunj
+                </p>
+                <p className="text-xs text-grey-darkest">
+                  12:45 pm
+                </p>
+              </div>
+            </div>
+          </div>
 
-                            <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2]">
-                                <div>
-                                    <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
-                                </div>
-                                <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
-                                    <div className="flex items-bottom justify-between">
-                                        <p className="text-grey-darkest">
-                                            Ram
-                                        </p>
-                                        <p className="text-xs text-grey-darkest">
-                                            12:45 pm
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+          <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2]">
+            <div>
+              <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
+            </div>
+            <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
+              <div className="flex items-bottom justify-between">
+                <p className="text-grey-darkest">
+                  Ram
+                </p>
+                <p className="text-xs text-grey-darkest">
+                  12:45 pm
+                </p>
+              </div>
+            </div>
+          </div>
 
-                            <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2] ">
-                                <div>
-                                    <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
-                                </div>
-                                <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
-                                    <div className="flex items-bottom justify-between">
-                                        <p className="text-grey-darkest">
-                                            Ram
-                                        </p>
-                                        <p className="text-xs text-grey-darkest">
-                                            12:45 pm
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2]">
-                                <div>
-                                    <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
-                                </div>
-                                <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
-                                    <div className="flex items-bottom justify-between">
-                                        <p className="text-grey-darkest">
-                                            Ram
-                                        </p>
-                                        <p className="text-xs text-grey-darkest">
-                                            12:45 pm
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+          <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2] ">
+            <div>
+              <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
+            </div>
+            <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
+              <div className="flex items-bottom justify-between">
+                <p className="text-grey-darkest">
+                  Ram
+                </p>
+                <p className="text-xs text-grey-darkest">
+                  12:45 pm
+                </p>
+              </div>
+            </div>
+          </div>
 
 
-                            <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2] ">
-                                <div>
-                                    <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
-                                </div>
-                                <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
-                                    <div className="flex items-bottom justify-between">
-                                        <p className="text-grey-darkest">
-                                            Ram
-                                        </p>
-                                        <p className="text-xs text-grey-darkest">
-                                            12:45 pm
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+          <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2]">
+            <div>
+              <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
+            </div>
+            <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
+              <div className="flex items-bottom justify-between">
+                <p className="text-grey-darkest">
+                  Ram
+                </p>
+                <p className="text-xs text-grey-darkest">
+                  12:45 pm
+                </p>
+              </div>
+            </div>
+          </div>
 
-                            <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2]">
-                                <div>
-                                    <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
-                                </div>
-                                <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
-                                    <div className="flex items-bottom justify-between">
-                                        <p className="text-grey-darkest">
-                                            Ram
-                                        </p>
-                                        <p className="text-xs text-grey-darkest">
-                                            12:45 pm
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+
+          <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2] ">
+            <div>
+              <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
+            </div>
+            <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
+              <div className="flex items-bottom justify-between">
+                <p className="text-grey-darkest">
+                  Ram
+                </p>
+                <p className="text-xs text-grey-darkest">
+                  12:45 pm
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className=" px-3 flex items-center bg-[#F2EFEF] hover:bg-[#DFEBF2]">
+            <div>
+              <img className="h-10 w-10 rounded-full" src="./images/icons/avatar.svg"/>
+            </div>
+            <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
+              <div className="flex items-bottom justify-between">
+                <p className="text-grey-darkest">
+                  Ram
+                </p>
+                <p className="text-xs text-grey-darkest">
+                  12:45 pm
+                </p>
+              </div>
+            </div>
+          </div>
 
 
         </div>
