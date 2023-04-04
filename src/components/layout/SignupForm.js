@@ -3,7 +3,9 @@ import { useForm } from "react-hook-form";
 
 const SignupForm = () => {
  
+
   const [uname, setUname] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmpassword, setConfirmpassword] = useState("");
@@ -21,6 +23,7 @@ const SignupForm = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     console.log(uname, email, password, confirmpassword, mobileno);
+    console.log(username, email, password, confirmpassword, mobileno);
   };
 
 
@@ -38,81 +41,87 @@ const SignupForm = () => {
 
         <form onSubmit={handleSubmit(onSubmit)}>
           
-          <div className="flex justify-center items-center py-2">
+          <div className="flex justify-center items-center py-1">
             <img src="./images/icons/Name.svg" />
             <input
             {...register("Username", { required: true, maxLength:20 })}
               type="text"
-              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
+              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[40px] rounded-2xl pl-5"
               placeholder="Enter User Name*"
+
               onChange={(event) => setUname(event.target.value)}
             />
           </div>
-          <span className="ml-12">
-                {errors.Username?.type === "required" &&
-                  "UserName is Required!"}
-                  {errors.Username?.type === "maxLength" && "UserName cannot exceed 20 characters "
-                  }
-              </span>
+          <lable className = "ml-12 text-red-600">
+                {errors.Username?.type === "required" && "Username is Required!"}
+                  {errors.Username?.type === "maxLength" && "Username cannot exceed 20 characters"}
+          </lable>
 
-          <div className="flex justify-center items-center py-2">
+
+          <div className="flex justify-center items-center py-1">
             <img src="./images/icons/Email.svg" />
             <input
             {...register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, })}
               type="email"
-              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
-              placeholder="Enter Email"
+              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[40px] rounded-2xl pl-5"
+              placeholder="Enter Email*"
               onChange={(event) => setEmail(event.target.value)}
             />
           </div>
-          <span>
-                {errors.email?.type === "required" && "Email is Required"}
-                {errors.email?.type === "pattern" && "Inval Email."}
-              </span>
 
-          <div className="flex justify-center items-center py-2">
+          <lable className = "ml-12 text-red-600 ">
+                {errors.email?.type === "required" && "Email is Required!"}
+                {errors.email?.type === "pattern" && "Inval Email."}
+           </lable>
+
+
+          <div className="flex justify-center items-center py-1">
             <img src="./images/icons/Password.svg" />
             <input
               {...register("Password", { required: true, pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8}$", })}
               type="password"
-              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
-              placeholder="Enter Password"
+              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[40px] rounded-2xl pl-5"
+              placeholder="Enter Password*"
               onChange={(event) => setPassword(event.target.value)}
             />
           </div>
 
-          <span>
-                {errors.email?.type === "required" && "Password is Required"}
-                {errors.email?.type === "pattern" && "One Uppercase and lowercase letter, and at least 8 characters"}
-              </span>
+          <label className="ml-12 text-red-600">
+                {errors.Password?.type === "required" && "Password is Required!"}
+                {errors.Password?.type === "pattern" && "One Uppercase and lowercase letter, and at least 8 characters"}
+          </label>
 
-          <div className="flex justify-center items-center py-2">
+          <div className="flex justify-center items-center py-1">
             <img src="./images/icons/Cpassword.svg" />
             <input
+              {...register("Cpassword", { required: true, pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8}$", })}
               type="password"
-              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
-              placeholder="Enter Confirm Password"
+              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[40px] rounded-2xl pl-5"
+              placeholder="Enter Confirm Password*"
               onChange={(event) => setConfirmpassword(event.target.value)}
             />
           </div>
+          <label className="ml-12 text-red-600">
+                {errors.Cpassword?.type === "required" && "Confirmpassword is Required!"}
+                {errors.Cpassword?.type === "pattern" && "One Uppercase and lowercase letter, and at least 8 characters"}
+          </label>
 
 
-          <div className="flex justify-center items-center py-2">
+          <div className="flex justify-center items-center py-1">
             <img src="./images/icons/MobileNo.svg" />
             <input
-            {...register("mobileno", { required: true,pattern: /^[0-9]+$/i, maxLength:10 })}
+            {...register("mobileno", { required: true,pattern: /[1-9]\d*|0\d+/, maxLength:10 })}
               type="phone"
-              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
-              placeholder="Enter Mobile no"
+              className="ml-5 bg-[#e0e0ed] outline-none w-full h-[40px] rounded-2xl pl-5"
+              placeholder="Enter Mobile no*"
               onChange={(event) => setMobileno(event.target.value)}
             />
-            <lable>
+          </div>
+          <lable className = "ml-12 text-red-600">
                 {errors.mobileno?.type === "required" && "MobileNumber is Required!"}
                 {errors.mobileno?.type === "pattern" && "Number Only"}
                 {errors.mobileno?.type === "maxLength" && "Invalid MobileNumber."}
-              </lable>
-          </div>
-
+           </lable>
           
 
           <div className="flex justify-center items-center py-3 ">

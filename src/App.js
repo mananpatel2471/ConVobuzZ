@@ -16,8 +16,8 @@ function App() {
       <div className="flex">
         <Chatscreen />
         <Chatpage />
-      </div>   
-      <SignupForm /> 
+       </div>   
+        <SignupForm /> 
        <Login/>      
        <VideoPage/> 
     </>
