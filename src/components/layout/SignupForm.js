@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 import {Link} from "react-router-dom";
 import axios from 'axios';
 import config from "../../config/default";
-import {setErrorState} from "../../state/global";
+import {setErrorState, setUser} from "../../state/global";
 import {useNavigate} from 'react-router-dom';
 
 const SignupForm = () => {
@@ -34,13 +34,14 @@ const SignupForm = () => {
     }
     axios.post(SERVER_URL + "/api/register", data)
       .then((res) => {
-        console.log(res)
+        setUser(res.data.user.email, res.data.user.name, res.data.user.mobile, res.data.token)
+        navigate('/');
       })
       .catch((err => {
         const code = err.response.status;
         const {error, description, trace} = err.response.data;
         setErrorState(code, error, description, trace);
-        console.log(err)
+        //console.log(err)
         navigate('/error');
       }))
   };

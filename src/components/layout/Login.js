@@ -1,10 +1,15 @@
 import React, {Component, useState} from "react";
 import {useForm} from "react-hook-form";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import axios from "axios";
+import config from "../../config/default";
+import {setErrorState} from "../../state/global";
 
 const Login = () => {
+  const SERVER_URL = config.SERVER_URL;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const {
     register,
@@ -14,8 +19,18 @@ const Login = () => {
 
   const onSubmit = (form, event) => {
     event.preventDefault();
-    const data = {email, password}
-    console.log(email, password);
+    const data = {email, password};
+    axios.post(SERVER_URL + "/api/login", data)
+      .then((res) => {
+
+      })
+      .catch((err) => {
+        const code = err.response.status;
+        const {error, description, trace} = err.response.data;
+        setErrorState(code, error, description, trace);
+        //console.log(err)
+        navigate('/error');
+      })
   };
 
   return (
