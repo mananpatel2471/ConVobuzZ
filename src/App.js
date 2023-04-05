@@ -11,6 +11,8 @@ import SignupForm from "./components/layout/SignupForm";
 function App() {
   return (
     <>
+      <Navbar/>
+      <Sidebar/>
       <LoriRoutes/>
     </>
   );
