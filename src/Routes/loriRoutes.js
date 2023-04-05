@@ -7,7 +7,7 @@ import Landingpage from "../components/pages/landingpage";
 
 const LoriRoutes = () => {
   return (
-    <Router>
+
       <div>
         <Routes>
           <Route
@@ -18,7 +18,6 @@ const LoriRoutes = () => {
           <Route path="/signup" element={<SignupForm/>}/>
         </Routes>
       </div>
-    </Router>
   );
 }
 export default LoriRoutes;

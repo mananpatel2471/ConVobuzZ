@@ -8,14 +8,14 @@ const Login = () => {
 
   const {
     register,
-    formState: { errors },
+    formState: {errors},
     handleSubmit,
   } = useForm();
 
   const onSubmit = (form, event) => {
     event.preventDefault();
+    const data = {email, password}
     console.log(email, password);
-    window.location.replace("/chat");
   };
 
   return (
@@ -30,7 +30,7 @@ const Login = () => {
         <h3 className="text-3xl  flex justify-center items-center">Sign In</h3>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex justify-center items-center py-2">
-            <img src="./images/icons/Email.svg" />
+            <img src="./images/icons/Email.svg"/>
             <input
               {...register("email", {
                 required: true,
@@ -48,7 +48,7 @@ const Login = () => {
           </label>
 
           <div className="flex justify-center items-center py-1">
-            <img src="./images/icons/Password.svg" />
+            <img src="./images/icons/Password.svg"/>
             <input
               {...register("Password", {
                 required: true,

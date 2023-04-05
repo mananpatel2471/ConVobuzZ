@@ -5,7 +5,6 @@ const errorState = {
   trace: []
 };
 
-
 export function setErrorState(code, error, description, trace) {
   errorState.code = code;
   errorState.error = error;

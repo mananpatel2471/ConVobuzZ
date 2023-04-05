@@ -9,10 +9,12 @@ function ErrorPage() {
     <div className="error-container">
       <h1 className="error-code">Error {error.code}</h1>
       <p className="error-message">{error.error}</p>
-      <p className="error-description">{error.description}</p>
+      <p className="error-description">
+        <pre>{JSON.stringify(error.description)}</pre>
+      </p>
       <pre className="stack-trace">{error.trace.map((e, i) => {
         return <div key={i}>
-          {e}
+          {<p>{e}</p>}
         </div>
       })}</pre>
     </div>
