@@ -35,7 +35,11 @@ const SignupForm = () => {
     axios.post(SERVER_URL + "/api/register", data)
       .then((res) => {
         setUser(res.data.user.email, res.data.user.name, res.data.user.mobile, res.data.token)
-        navigate('/');
+        localStorage.setItem("email", res.data.user.email);
+        localStorage.setItem("email", res.data.user.name);
+        localStorage.setItem("email", res.data.user.mobile);
+        localStorage.setItem("email", res.data.token);
+        navigate('/home');
       })
       .catch((err => {
         const code = err.response.status;

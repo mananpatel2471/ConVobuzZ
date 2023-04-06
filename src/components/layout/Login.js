@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import config from "../../config/default";
-import {setErrorState} from "../../state/global";
+import {setErrorState, setUser} from "../../state/global";
 
 const Login = () => {
   const SERVER_URL = config.SERVER_URL;
@@ -22,7 +22,12 @@ const Login = () => {
     const data = {email, password};
     axios.post(SERVER_URL + "/api/login", data)
       .then((res) => {
-
+        setUser(res.data.user.email, res.data.user.name, res.data.user.mobile, res.data.token)
+        localStorage.setItem("email", res.data.user.email);
+        localStorage.setItem("email", res.data.user.name);
+        localStorage.setItem("email", res.data.user.mobile);
+        localStorage.setItem("email", res.data.token);
+        navigate('/home');
       })
       .catch((err) => {
         const code = err.response.status;

@@ -11,9 +11,9 @@ const LoriRoutes = () => {
 
     <div>
       <Routes>
-        <Route exact path="/" element={<HomePage/>}/>
+        <Route exact path="/" element={<Login/>}/>
         <Route exact path="/welcome" element={<Landingpage/>}/>
-        <Route path="/login" element={<Login/>}/>
+        <Route path="/home" element={<HomePage  />}/>
         <Route path="/error" element={<Error/>}/>
         <Route path="/signup" element={<SignupForm/>}/>
       </Routes>

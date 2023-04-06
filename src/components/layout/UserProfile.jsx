@@ -10,8 +10,7 @@ function UserProfile({user}) {
         </div>
         <div className="user-details">
           <p className="text-gray-600 text-lg mb-2 font-medium">Email: {user.email}</p>
-          <p className="text-gray-600 text-lg mb-2 font-medium">Username: {user.username}</p>
-          <p className="text-gray-600 text-lg mb-2 font-medium">Location: {user.location}</p>
+          <p className="text-gray-600 text-lg mb-2 font-medium">Name: {user.name}</p>
         </div>
       </div>
     </div>
