@@ -42,6 +42,7 @@ const SignupForm = () => {
         navigate('/home');
       })
       .catch((err => {
+        console.log(err)
         const code = err.response.status;
         const {error, description, trace} = err.response.data;
         setErrorState(code, error, description, trace);

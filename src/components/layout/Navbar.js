@@ -11,6 +11,7 @@ function Navbar() {
               <div className="relative w-full md:w-auto mx-auto">
                 <input
                   type="text"
+                  id="searchUser"
                   className="w-full md:w-[468px]  h-8 bg-gray-g1 outline-none p-4 text-[#000000] rounded-md pl-8"
                   placeholder="Search"
                 />
