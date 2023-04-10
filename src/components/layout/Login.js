@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import config from "../../config/default";
-import {setErrorState, setUser} from "../../state/global";
+import {getUser, setErrorState, setUser, writeUserData} from "../../state/global";
 
 const Login = () => {
   const SERVER_URL = config.SERVER_URL;
@@ -17,24 +17,25 @@ const Login = () => {
     handleSubmit,
   } = useForm();
 
+  console.log(getUser())
   const onSubmit = (form, event) => {
     event.preventDefault();
     const data = {email, password};
     axios.post(SERVER_URL + "/api/login", data)
       .then((res) => {
         setUser(res.data.user.email, res.data.user.name, res.data.user.mobile, res.data.token)
-        localStorage.setItem("email", res.data.user.email);
-        localStorage.setItem("email", res.data.user.name);
-        localStorage.setItem("email", res.data.user.mobile);
-        localStorage.setItem("email", res.data.token);
-        navigate('/home');
+        navigate('/', {replace: true});
       })
       .catch((err) => {
-        const code = err.response.status;
-        const {error, description, trace} = err.response.data;
-        setErrorState(code, error, description, trace);
-        //console.log(err)
-        navigate('/error');
+        try {
+          const code = err.response.status;
+          const {error, description, trace} = err.response.data;
+          setErrorState(code, error, description, trace);
+        } catch (err) {
+          setErrorState("unknown", "Client Side Error", err, [null]);
+        }
+
+        navigate('/error', {replace: true});
       })
   };
 

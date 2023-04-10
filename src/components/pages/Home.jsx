@@ -1,8 +1,16 @@
-import React, {useContext} from 'react';
+import React, {useEffect} from 'react';
 import {getUser} from "../../state/global";
+import {useNavigate} from "react-router-dom";
 
 function HomePage() {
+  const navigate = useNavigate();
   const user = getUser()
+
+  useEffect(() => {
+    if (!user.token) {
+      navigate("/login", {replace: true});
+    }
+  }, [])
 
   return (
     <div className="max-w-screen-lg mx-auto px-4 py-8">

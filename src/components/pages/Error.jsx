@@ -4,7 +4,6 @@ import {getErrorState} from "../../state/global";
 
 function ErrorPage() {
   const error = getErrorState();
-  console.log(error)
   return (
     <div className="error-container">
       <h1 className="error-code">Error {error.code}</h1>

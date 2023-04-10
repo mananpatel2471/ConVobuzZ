@@ -1,8 +1,8 @@
 const errorState = {
-  code: 200,
-  error: "An Error",
-  description: "desc",
-  trace: []
+  code: undefined,
+  error: undefined,
+  description: undefined,
+  trace: undefined
 };
 
 
@@ -25,6 +25,9 @@ export function getErrorState() {
 }
 
 export function getUser() {
+  if (!userState.token) {
+    readUserData();
+  }
   return {...userState};
 }
 
@@ -33,4 +36,21 @@ export function setUser(email, name, mobile, token) {
   userState.name = name;
   userState.token = token;
   userState.mobile = mobile;
+  writeUserData(email, name, mobile, token)
+}
+
+export function readUserData() {
+  const email = localStorage.getItem("email");
+  const token = localStorage.getItem("token");
+  const name = localStorage.getItem("name");
+  const mobile = localStorage.getItem("mobile");
+
+  setUser(email, name, mobile, token);
+}
+
+export function writeUserData(email, name, mobile, token) {
+  localStorage.setItem("email", email);
+  localStorage.setItem("token", token);
+  localStorage.setItem("name", name);
+  localStorage.setItem("mobile", mobile);
 }

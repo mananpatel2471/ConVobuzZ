@@ -35,19 +35,20 @@ const SignupForm = () => {
     axios.post(SERVER_URL + "/api/register", data)
       .then((res) => {
         setUser(res.data.user.email, res.data.user.name, res.data.user.mobile, res.data.token)
-        localStorage.setItem("email", res.data.user.email);
-        localStorage.setItem("email", res.data.user.name);
-        localStorage.setItem("email", res.data.user.mobile);
-        localStorage.setItem("email", res.data.token);
-        navigate('/home');
+        navigate('/',{replace:true});
       })
       .catch((err => {
-        console.log(err)
-        const code = err.response.status;
-        const {error, description, trace} = err.response.data;
-        setErrorState(code, error, description, trace);
+        try{
+          const code = err.response.status;
+          const {error, description, trace} = err.response.data;
+          setErrorState(code, error, description, trace);
+        }
+        catch (err){
+          setErrorState("unknown", "Client Side Error", err, null);
+        }
+
         //console.log(err)
-        navigate('/error');
+        navigate('/error',{replace:true});
       }))
   };
 
