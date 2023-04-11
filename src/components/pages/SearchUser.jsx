@@ -20,15 +20,12 @@ const SearchUser = () => {
   }, [])
   const onSearch = (name) => {
     //const name = document.querySelector('#searchUser').value;
-    console.log(name)
     const data = {searchStr: name};
     axios.get(`${SERVER_URL}/api/searchUser`, {method: "GET", params: data})
       .then((res) => {
         setUsers([...res.data]);
-        console.log(users)
       })
       .catch((err) => {
-        console.log(err)
         const code = err.response.status;
         const {error, description, trace} = err.response.data;
         setErrorState(code, error, description, trace);

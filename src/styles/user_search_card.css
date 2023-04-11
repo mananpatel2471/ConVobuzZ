@@ -51,9 +51,12 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
+button[disabled=disabled], button:disabled,button:disabled:hover, button[disabled=disabled]:hover {
+    cursor: default;
+    background-color: #797979;
+}
 button:hover {
-    background-color: #0062cc;
+    background-color: #00438b;
 }
 
 .user-card__button {

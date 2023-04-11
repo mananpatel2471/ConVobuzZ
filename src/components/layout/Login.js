@@ -17,14 +17,13 @@ const Login = () => {
     handleSubmit,
   } = useForm();
 
-  console.log(getUser())
   const onSubmit = (form, event) => {
     event.preventDefault();
     const data = {email, password};
     axios.post(SERVER_URL + "/api/login", data)
       .then((res) => {
         setUser(res.data.user.email, res.data.user.name, res.data.user.mobile, res.data.token)
-        navigate('/', {replace: true});
+        navigate('/');
       })
       .catch((err) => {
         try {
