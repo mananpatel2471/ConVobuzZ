@@ -1,4 +1,5 @@
 function Navbar() {
+  
   return (
     <>
       <div className="bg-[#6096B4] py-2 px-5">

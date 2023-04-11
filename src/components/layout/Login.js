@@ -5,6 +5,9 @@ import axios from "axios";
 import config from "../../config/default";
 import {setErrorState, setUser} from "../../state/global";
 
+
+
+
 const Login = () => {
   const SERVER_URL = config.SERVER_URL;
   const [email, setEmail] = useState("");
@@ -20,20 +23,20 @@ const Login = () => {
   const onSubmit = (form, event) => {
     event.preventDefault();
     const data = {email, password};
-    axios.post(SERVER_URL + "/api/login", data)
+    axios.post(SERVER_URL + "/api/user/login", data)
       .then((res) => {
         setUser(res.data.user.email, res.data.user.name, res.data.user.mobile, res.data.token)
         localStorage.setItem("email", res.data.user.email);
-        localStorage.setItem("email", res.data.user.name);
-        localStorage.setItem("email", res.data.user.mobile);
-        localStorage.setItem("email", res.data.token);
+        localStorage.setItem("name", res.data.user.name);
+        localStorage.setItem("mobileno", res.data.user.mobile);
+        localStorage.setItem("token", res.data.token);
         navigate('/home');
       })
       .catch((err) => {
         const code = err.response.status;
         const {error, description, trace} = err.response.data;
         setErrorState(code, error, description, trace);
-        //console.log(err)
+        console.log(err)
         navigate('/error');
       })
   };

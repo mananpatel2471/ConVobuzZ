@@ -1,7 +1,17 @@
+import { useEffect , useState } from "react";
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link , useNavigate ,Routes, Route} from "react-router-dom";
+import Login from "../layout/Login";
 
 const Landingpage = () => {
+
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("userInfo"));
+
+    if (user) navigate("/chats");
+  }, [navigate]); 
 
   return (
     <>
@@ -15,13 +25,14 @@ const Landingpage = () => {
 
           </div>
           <div className="hidden md:flex items-center ">
-            <Link to="/login">
+            {/* <Link to="/login"> */}
+            <Routes><Route path="/login" element ={<Login />} /></Routes>
               <button
                 type="submit"
                 className="text-lg  w-[134px] h-[38px] bg-[#BDCDD6] rounded-xl hover:bg-[#9FCFEB] shadow-xl"
               > Sign in
               </button>
-            </Link>
+            {/* </Link> */}
 
 
           </div>

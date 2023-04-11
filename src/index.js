@@ -3,15 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router} from 'react-router-dom';
+ import {BrowserRouter as Router} from 'react-router-dom';
+import { ChakraProvider, theme } from '@chakra-ui/react'
+import ChatProvider from './state/ChatProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <App/>
-    </Router>
-  </React.StrictMode>
+    <ChatProvider>
+      <ChakraProvider theme={theme}>
+        <App/>
+      </ChakraProvider>
+      </ChatProvider>
+   </Router>
+    </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -32,13 +32,13 @@ const SignupForm = () => {
       password,
       mobile: mobileno
     }
-    axios.post(SERVER_URL + "/api/register", data)
+    axios.post(SERVER_URL + "/api/user", data)
       .then((res) => {
         setUser(res.data.user.email, res.data.user.name, res.data.user.mobile, res.data.token)
         localStorage.setItem("email", res.data.user.email);
-        localStorage.setItem("email", res.data.user.name);
-        localStorage.setItem("email", res.data.user.mobile);
-        localStorage.setItem("email", res.data.token);
+        localStorage.setItem("name", res.data.user.name);
+        localStorage.setItem("mobile", res.data.user.mobile);
+        localStorage.setItem("token", res.data.token);
         navigate('/home');
       })
       .catch((err => {
