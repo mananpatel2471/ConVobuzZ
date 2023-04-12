@@ -1,5 +1,4 @@
 import { Button } from "@chakra-ui/button";
-import { extendTheme } from '@chakra-ui/react'
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
 import { VStack } from "@chakra-ui/layout";

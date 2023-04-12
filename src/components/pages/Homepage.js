@@ -10,15 +10,15 @@ import {
   } from "@chakra-ui/react";
    import { useEffect } from "react";
   import { useNavigate } from "react-router"; 
-  import Login from "../Authentication/Login";
-  import Signup from "../Authentication/Signup";
+  import Login from "../layout/Login";
+  import Signup from "../layout/SignupForm";
   
   function Homepage() {
      const navigate = useNavigate();
   
      useEffect(() => {
       const user = JSON.parse(localStorage.getItem("userInfo"));
-  
+     
       if (user) navigate("/chats");
     }, [navigate]); 
   
@@ -34,12 +34,12 @@ import {
           borderRadius="lg"
           borderWidth="1px"
         > */}
-        <div className="flex justify-center items-center">
+        {/* <div className="flex justify-center items-center">
           <img
             className="w-[100px] h-[100px]"
             src="./images/icons/convobuzz.svg"
           />
-          </div>
+          </div> */}
           {/* <Text fontSize="4xl" fontFamily="Work sans">
             ConVoBuzZ
           </Text> */}
