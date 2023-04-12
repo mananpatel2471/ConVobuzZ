@@ -1,41 +1,76 @@
-import React, {Component, useState} from "react";
-import {useForm} from "react-hook-form";
-import {Link, useNavigate} from "react-router-dom";
+import React, {useState} from "react";
+import { Button } from "@chakra-ui/button";
 import axios from "axios";
 import config from "../../config/default";
-import {setErrorState, setUser} from "../../state/global";
+import { useToast } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import SignupForm from "./SignupForm";
+
 
 const Login = () => {
   const SERVER_URL = config.SERVER_URL;
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  // const [show, setShow] = useState(false);
+  // const handleClick = () => setShow(!show);
+  const toast = useToast();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [loading, setLoading] = useState(false);
 
-  const {
-    register,
-    formState: {errors},
-    handleSubmit,
-  } = useForm();
+  //const navigate = useNavigate();
 
-  const onSubmit = (form, event) => {
-    event.preventDefault();
-    const data = {email, password};
-    axios.post(SERVER_URL + "/api/login", data)
-      .then((res) => {
-        setUser(res.data.user.email, res.data.user.name, res.data.user.mobile, res.data.token)
-        localStorage.setItem("email", res.data.user.email);
-        localStorage.setItem("email", res.data.user.name);
-        localStorage.setItem("email", res.data.user.mobile);
-        localStorage.setItem("email", res.data.token);
-        navigate('/home');
-      })
-      .catch((err) => {
-        const code = err.response.status;
-        const {error, description, trace} = err.response.data;
-        setErrorState(code, error, description, trace);
-        //console.log(err)
-        navigate('/error');
-      })
+  const submitHandler = async () => {
+    //setLoading(true);
+    console.log(email,password)
+    if (!email || !password) {
+      toast({
+        title: "Please Fill all the Feilds",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+      setLoading(false);
+      return;
+    }
+
+     console.log(email, password);
+    try {
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+
+      const { data } = await axios.post(
+        "/api/user/login",
+        { email, password },
+        config
+      );
+
+      // console.log(JSON.stringify(data));
+      toast({
+        title: "Login Successful",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+      debugger
+      localStorage.setItem("userInfo", JSON.stringify(data));
+      //setLoading(false);
+      //navigate("/chats");
+    } catch (error) {
+      toast({
+        title: "Error Occured!",
+        description: error.response.data.message,
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+      //setLoading(false);
+    }
   };
 
   return (
@@ -48,43 +83,29 @@ const Login = () => {
           />
         </div>
         <h3 className="text-3xl  flex justify-center items-center">Sign In</h3>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form>
           <div className="flex justify-center items-center py-2">
             <img src="./images/icons/Email.svg"/>
             <input
-              {...register("email", {
-                required: true,
-                pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-              })}
               type="email"
               className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
               placeholder="Enter email"
-              onChange={(event) => setEmail(event.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <label className="ml-12 text-red-600">
-            {errors.email?.type === "required" && "Email is Required"}
-            {errors.email?.type === "pattern" && "Inval Email."}
-          </label>
+          
 
           <div className="flex justify-center items-center py-1">
             <img src="./images/icons/Password.svg"/>
             <input
-              {...register("Password", {
-                required: true,
-                pattern:
-                  "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8}$",
-              })}
+             
               type="password"
               className="ml-5 bg-[#e0e0ed] outline-none w-full h-[45px] rounded-2xl pl-5"
               placeholder="Enter password"
-              onChange={(event) => setPassword(event.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <label className="ml-12 text-red-600">
-            {errors.Password?.type === "required" && "Password is Required!"}
-            {errors.Password?.type === "pattern" && "One Uppercase and lowercase letter, and at least 8 characters"}
-          </label>
+          
 
           <div className=" flex items-center justify-between ">
             <div className=" sm:pl-16 ">
@@ -104,18 +125,34 @@ const Login = () => {
 
           <div className="flex justify-center items-center py-2 ">
             <button
+             onClick={submitHandler}
               type="submit"
               className=" text-xl w-[200px] h-[40px] bg-[#e0e0ed] rounded-xl hover:bg-[#6096B4]"
             >
               Login
             </button>
+            <div>
+            <Button
+                  variant="solid"
+                  color="code.2"
+                  // bg="code.1"
+                  width="100%"
+                  onClick={() => {
+                    setEmail("guest@example.com");
+                    setPassword("123456");
+                  }}
+                >
+              Get Guest User Credentials
+            </Button>
+            </div>
           </div>
 
           <p className="flex justify-center items-center ">
             Don't have an account?
-            <Link to="/signup" className="ml-1 text-blue-800">
+            <Routes><Route path="/signup" element ={<SignupForm />} className="ml-1 text-blue-800"> Sign Up </Route></Routes>
+            {/* <Link to="/signup" className="ml-1 text-blue-800">
               Sign Up
-            </Link>
+            </Link> */}
           </p>
         </form>
       </div>

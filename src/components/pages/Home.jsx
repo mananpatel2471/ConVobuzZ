@@ -1,8 +1,9 @@
 import React, {useContext} from 'react';
-import {getUser} from "../../state/global";
+import { getUser } from "../../state/global";
 
 function HomePage() {
-  const user = getUser()
+  const user = getUser();
+  console.log("User in home page",user)
 
   return (
     <div className="max-w-screen-lg mx-auto px-4 py-8">
