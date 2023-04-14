@@ -9,13 +9,12 @@ import Homepage from "./components/pages/Homepage";
 //import LoriRoutes from "./Routes/loriRoutes";
 
 function App() {
-  console.log("in app js")
   return (
     <div>
       {/* <LoriRoutes /> */}
       
         <Routes>
-        <Route path="/*" element ={<Homepage />} exact />
+        <Route path="/" element ={<Homepage />} exact />
         <Route path="/chats" element ={<ChatPage1 />} /> 
         </Routes>
      

@@ -29,11 +29,13 @@ import ChatLoading from "../ChatContents/ChatLoading";
 import { getSender } from "../ChatContents/ChatLogics";
 import { useNavigate } from "react-router-dom"; 
 import UserListItem from "../UserAvatar/UserListItem";
-
+import config from "../../config/default";
 
 
 
 const SideDrawer = () => {
+
+    const SERVER_URL = config.SERVER_URL;
     const [search, setSearch] = useState("");
     const [searchResult, setSearchResult] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -78,7 +80,7 @@ const SideDrawer = () => {
             },
           };
     
-          const { data } = await axios.get(`/api/user?search=${search}`, config);
+          const { data } = await axios.get(SERVER_URL +`/api/user?search=${search}`, config);
     
           setLoading(false);
           setSearchResult(data);
@@ -105,7 +107,7 @@ const SideDrawer = () => {
               Authorization: `Bearer ${user.token}`,
             },
           };
-          const { data } = await axios.post(`/api/chat`, { userId }, config);
+          const { data } = await axios.post(SERVER_URL + `/api/chat`, { userId }, config);
     
           if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
           setSelectedChat(data);

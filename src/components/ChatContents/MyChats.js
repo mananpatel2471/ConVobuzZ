@@ -1,17 +1,18 @@
-import React from 'react'
+import React from "react";
 import { AddIcon } from "@chakra-ui/icons";
 import { Box, Stack, Text } from "@chakra-ui/layout";
 import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import ChatLoading from "../ChatContents/ChatLoading";
- import { getSender } from "../ChatContents/ChatLogics";
- import GroupChatModal from "../ChatContents/GroupChatModal";
+import { getSender } from "../ChatContents/ChatLogics";
+import GroupChatModal from "../ChatContents/GroupChatModal";
 import { Button } from "@chakra-ui/react";
 import { ChatState } from "../../state/ChatProvider";
+import config from "../../config/default";
 
-const MyChats = () => {
-
+const MyChats = ({ fetchAgain }) => {
+  const SERVER_URL = config.SERVER_URL;
   const [loggedUser, setLoggedUser] = useState();
 
   const { selectedChat, setSelectedChat, user, chats, setChats } = ChatState();
@@ -27,7 +28,7 @@ const MyChats = () => {
         },
       };
 
-      const { data } = await axios.get("/api/chat", config);
+      const { data } = await axios.get(SERVER_URL+"/api/chat", config);
       setChats(data);
     } catch (error) {
       toast({
@@ -46,7 +47,6 @@ const MyChats = () => {
     fetchChats();
     // eslint-disable-next-line
   }, [fetchAgain]);
-
 
   return (
     <Box
@@ -124,7 +124,7 @@ const MyChats = () => {
         )}
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default MyChats
+export default MyChats;

@@ -8,11 +8,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import ProfileModal from "../ChatContents/ProfileModal";
- import ScrollableChat from "../ChatContents/ScrollableChat";
+import ScrollableChat from "../ChatContents/ScrollableChat";
 //  import Lottie from "react-lottie";
- import animationData from "../../Animation/typing.json";
-
- import io from "socket.io-client";
+import animationData from "../../Animation/typing.json";
+import config from "../../config/default";
+import io from "socket.io-client";
 import UpdateGroupChatModal from "../ChatContents/UpdateGroupChatModal";
 import { ChatState } from "../../state/ChatProvider";
 
@@ -20,6 +20,8 @@ const ENDPOINT = "http://localhost:5000";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
+
+  const SERVER_URL = config.SERVER_URL;
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [newMessage, setNewMessage] = useState("");
@@ -52,7 +54,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+       SERVER_URL+ `/api/message/${selectedChat._id}`,
         config
       );
       setMessages(data);
@@ -82,7 +84,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
           },
         };
         setNewMessage("");
-        const { data } = await axios.post(
+        const { data } = await axios.post(SERVER_URL +
           "/api/message",
           {
             content: newMessage,
