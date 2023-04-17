@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "@chakra-ui/button";
+import { Button, ButtonGroup } from "@chakra-ui/button";
 import axios from "axios";
 import config from "../../config/default";
 import { useToast } from "@chakra-ui/react";
@@ -20,7 +20,6 @@ const Login = () => {
 
   const submitHandler = async () => {
     setLoading(true);
-    console.log(email, password);
     if (!email || !password) {
       toast({
         title: "Please Fill all the Feilds",
@@ -30,10 +29,10 @@ const Login = () => {
         position: "bottom",
       });
       setLoading(false);
-      return;
     }
 
     console.log(email, password);
+
     try {
       const config = {
         headers: {
@@ -41,12 +40,14 @@ const Login = () => {
         },
       };
 
-      const { data } = await axios.post(
-        SERVER_URL + "/api/user/login",
-        { email, password },
-        config
-      );
+      const { data } = await axios
+        .post(SERVER_URL + "/api/user/login", { email, password }, config)
+        .then((res) => {
+          console.log(res);
+        });
+      console.log(data);
 
+      console.log("in config");
       console.log(JSON.stringify(data));
       toast({
         title: "Login Successful",
@@ -55,20 +56,19 @@ const Login = () => {
         isClosable: true,
         position: "bottom",
       });
-      debugger;
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
-      navigate("/chats");
+       navigate("/chats");
     } catch (error) {
-      /* toast({
+      toast({
         title: "Error Occured!",
         description: error.response.data.message,
         status: "error",
         duration: 5000,
         isClosable: true,
         position: "bottom",
-      }); */
-      setLoading(false); 
+      });
+      setLoading(false);
     }
   };
 
@@ -127,35 +127,37 @@ const Login = () => {
             >
               Login
             </button>
-            <div>
-              <Button
-                variant="solid"
-                color="code.2"
-                // bg="code.1"
-                width="100%"
-                onClick={() => {
-                  setEmail("guest@example.com");
-                  setPassword("123456");
-                }}
-              >
-                Get Guest User Credentials
-              </Button>
-            </div>
+          </div>
+          <div>
+            <Button
+              variant="solid"
+              color="code.2"
+              // bg="#E8E8E8"
+              width="50%"
+              mx="25%"
+              onClick={() => {
+                setEmail("guest@example.com");
+                setPassword("123456");
+              }}
+            >
+              Get Guest User Credentials
+            </Button>
           </div>
 
           <p className="flex justify-center items-center ">
             Don't have an account?
-            <Routes>
+            {/* <Routes>
               <Route
                 path="/signup"
                 element={<SignupForm />}
                 className="ml-1 text-blue-800"
               >
-                {" "}
-                Sign Up{" "}
+                Sign up
+                 {" "} 
+                 Sign Up{" "} 
               </Route>
             </Routes>
-            {/* <Link to="/signup" className="ml-1 text-blue-800">
+             <Link to="/signup" className="ml-1 text-blue-800">
               Sign Up
             </Link> */}
           </p>

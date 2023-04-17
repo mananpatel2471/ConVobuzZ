@@ -12,12 +12,11 @@ function App() {
   return (
     <div>
       {/* <LoriRoutes /> */}
-      
-        <Routes>
-        <Route path="/" element ={<Homepage />} exact />
-        <Route path="/chats" element ={<ChatPage1 />} /> 
-        </Routes>
-     
+
+      <Routes>
+        <Route path="/*" element={<Homepage />} exact />
+        <Route path="/chats" element={<ChatPage1 />} />
+      </Routes>
     </div>
   );
 }
