@@ -11,11 +11,12 @@ function ErrorPage() {
       <p className="error-description">
         <pre>{JSON.stringify(error.description)}</pre>
       </p>
-      <pre className="stack-trace">{error.trace.map((e, i) => {
-        return <div key={i}>
-          {<p>{e}</p>}
-        </div>
-      })}</pre>
+      <pre className="stack-trace">{error.trace}</pre>
+      {/*<pre className="stack-trace">{error.trace.map((e, i) => {*/}
+      {/*  return <div key={i}>*/}
+      {/*    {<p>{e}</p>}*/}
+      {/*  </div>*/}
+      {/*})}</pre>*/}
     </div>
   );
 }

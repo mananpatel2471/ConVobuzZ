@@ -1,12 +1,8 @@
 import React, {useEffect, useState} from "react";
 
 import "./App.css";
-import {Routes, Route} from "react-router-dom";
-import ChatPage1 from "./components/pages/ChatPage1";
-//import Landingpage from "./components/pages/landingpage";
-import Homepage from "./components/pages/Homepage";
-import Video from "./components/video/Video";
-import LoriRoutes from "./Routes/loriRoutes";
+import ChatPage1 from "./components/pages/Chatpage";
+import Main from "./Routes/Main";
 import Sidebar from "./components/layout/Sidebar";
 import Navbar from "./components/layout/Navbar";
 import {UserContext} from "./context/user.context";
@@ -16,22 +12,21 @@ import {UserContext} from "./context/user.context";
 
 
 function App() {
-  const [user, setUser] = useState({name: '', email: '', mobile: -1, token})
+  const [user, setUser] = useState({name: '', email: '', mobile: -1, token:""})
   return (
     <div>
 
       <UserContext.Provider value={{user, setUser}}>
-
+        <Navbar />
+        <Sidebar/>
+        <Main/>
+        {/*<Routes>*/}
+        {/*  <Route path="/" element={<Homepage/>} exact/>*/}
+        {/*  <Route path="/chats" element={<ChatPage1/>}/>*/}
+        {/*  <Route path="/video" element={<Video/>}/>*/}
+        {/*</Routes>*/}
       </UserContext.Provider>
-      {/*<Navbar />*/}
-      {/*<Sidebar/>*/}
-      {/*<LoriRoutes />*/}
 
-      <Routes>
-        <Route path="/" element={<Homepage/>} exact/>
-        <Route path="/chats" element={<ChatPage1/>}/>
-        <Route path="/video" element={<Video/>}/>
-      </Routes>
 
     </div>
   );

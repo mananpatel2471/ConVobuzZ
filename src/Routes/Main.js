@@ -4,11 +4,11 @@ import SignupForm from "../components/layout/SignupForm";
 import Login from "../components/layout/Login";
 import Error from "../components/pages/Error";
 import Landingpage from "../components/pages/landingpage";
-import HomePage from "../components/pages/Home";
+import HomePage from "../components/pages/Homepage";
 import SearchUser from "../components/pages/SearchUser";
 import {getUser} from "../state/global";
 
-const LoriRoutes = () => {
+const Main = () => {
 
   const {token} = getUser();
   return (
@@ -17,11 +17,10 @@ const LoriRoutes = () => {
         <Route exact path="/" element={<HomePage/>}/>
         <Route exact path="/welcome" element={<Landingpage/>}/>
         <Route exact path="/error" element={<Error/>}/>
-        <Route exact path="/signup" element={<SignupForm/>}/>
         <Route exact path="/search" element={<SearchUser/>}/>
-        <Route exact path="/login" element={<Login/>}/>
+        <Route exact path="/notification"></Route>
       </Routes>
     </div>
   );
 }
-export default LoriRoutes;
+export default Main;
