@@ -26,12 +26,12 @@ const Landingpage = () => {
           </div>
           <div className="hidden md:flex items-center ">
             {/* <Link to="/login"> */}
-            <Routes><Route path="/login" element ={<Login />} /></Routes>
+            {/* <Routes><Route path="/login" element ={<Login />} /></Routes>
               <button
                 type="submit"
                 className="text-lg  w-[134px] h-[38px] bg-[#BDCDD6] rounded-xl hover:bg-[#9FCFEB] shadow-xl"
               > Sign in
-              </button>
+              </button> */}
             {/* </Link> */}
 
 

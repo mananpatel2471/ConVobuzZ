@@ -21,8 +21,11 @@ import { useState } from "react";
 import { ChatState } from "../../state/ChatProvider";
 import UserBadgeItem from "../UserAvatar/UserBadgeItem";
 import UserListItem from "../UserAvatar/UserListItem";
+import config from "../../config/default";
 
 const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
+
+  const SERVER_URL = config.SERVER_URL;
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [groupChatName, setGroupChatName] = useState();
   const [search, setSearch] = useState("");
@@ -73,7 +76,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.put(
+      const { data } = await axios.put(SERVER_URL +
         `/api/chat/rename`,
         {
           chatId: selectedChat._id,
@@ -131,7 +134,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.put(
+      const { data } = await axios.put( SERVER_URL +
         `/api/chat/groupadd`,
         {
           chatId: selectedChat._id,
@@ -176,7 +179,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.put(
+      const { data } = await axios.put(SERVER_URL+
         `/api/chat/groupremove`,
         {
           chatId: selectedChat._id,
@@ -240,7 +243,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
               />
               <Button
                 variant="solid"
-                colorScheme="Lightblue"
+                colorScheme="blue"
                 ml={1}
                 isLoading={renameloading}
                 onClick={handleRename}
