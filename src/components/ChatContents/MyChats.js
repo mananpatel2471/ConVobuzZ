@@ -13,12 +13,11 @@ import config from "../../config/default";
 
 const MyChats = ({ fetchAgain }) => {
   const SERVER_URL = config.SERVER_URL;
-  const [loggedUser, setLoggedUser] = useState();
+  const [loggedUser, setLoggedUser] = useState(JSON.parse(localStorage.getItem("userInfo")));
 
   const { selectedChat, setSelectedChat, user, chats, setChats } = ChatState();
 
   const toast = useToast();
-
   const fetchChats = async () => {
     // console.log(user._id);
     try {
@@ -92,7 +91,7 @@ const MyChats = ({ fetchAgain }) => {
       >
         {chats ? (
           <Stack overflowY="scroll">
-            {chats.map((chat) => (
+            {chats.map((chat,i) => (
               <Box
                 onClick={() => setSelectedChat(chat)}
                 cursor="pointer"
@@ -101,7 +100,7 @@ const MyChats = ({ fetchAgain }) => {
                 px={3}
                 py={2}
                 borderRadius="lg"
-                key={chat._id}
+                key={i}
               >
                 <Text>
                   {!chat.isGroupChat
