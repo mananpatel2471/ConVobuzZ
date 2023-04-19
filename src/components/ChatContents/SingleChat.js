@@ -15,8 +15,9 @@ import config from "../../config/default";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "../ChatContents/UpdateGroupChatModal";
 import { ChatState } from "../../state/ChatProvider";
+import config from "../../config/default";
 
-const ENDPOINT = "http://localhost:5000"; 
+const ENDPOINT = config.SERVER_URL;
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {

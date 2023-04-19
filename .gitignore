@@ -131,3 +131,9 @@ dist
 
 # idea files
 .idea
+
+# configuration
+src/config
+
+#build
+build
