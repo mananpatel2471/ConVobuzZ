@@ -166,3 +166,7 @@ video {
 .flex-1 {
   flex: 1 !important;
 }
+
+.css-18dcxwc{
+  overflow-y:scroll !important ;
+}
