@@ -142,9 +142,11 @@ const SideDrawer = () => {
             </Text>
           </Button>
         </Tooltip>
-        <Text fontSize="2xl" fontFamily="Work sans">
-          ConnVobuzz
+        <div>
+        <Text fontSize="2xl" fontFamily="Work sans" as='b'>
+          ConnVobuzZ
         </Text> 
+        </div>
         <div>
           <Menu>
             <MenuButton p={1}>

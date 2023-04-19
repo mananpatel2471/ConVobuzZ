@@ -20,8 +20,6 @@ import UserBadgeItem from "../UserAvatar/UserBadgeItem";
 import UserListItem from "../UserAvatar/UserListItem";
 import config from "../../config/default";
 
-
-
 const GroupChatModal = ({ children }) => {
   const SERVER_URL = config.SERVER_URL;
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -63,8 +61,11 @@ const GroupChatModal = ({ children }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(SERVER_URL +`/api/user?search=${search}`, config);
-      console.log( data );
+      const { data } = await axios.get(
+        SERVER_URL + `/api/user?search=${search}`,
+        config
+      );
+      console.log(data);
       setLoading(false);
       setSearchResult(data);
     } catch (error) {

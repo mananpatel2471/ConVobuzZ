@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 function Sidebar() {
   return (
     <>
-      <div className="flex bg-[#BDCDD6] items-center justify-center ">
+      <div className="flex bg-[#93BFCF] items-center justify-center shadow-inner">
         <div className="flex flex-col justify-center group items-center px-4   h-full">
           <Link to="/notifications">
             <div
@@ -29,7 +29,7 @@ function Sidebar() {
         </div>
 
         <div className="flex flex-col  justify-center group items-center px-4  h-full  ">
-          <Link to="/chat">
+          <Link to="/chats">
 
             <div
               className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
@@ -51,7 +51,7 @@ function Sidebar() {
           </Link>
         </div>
 
-        <div className="flex flex-col ml-1 justify-center group items-center px-4  h-full  ">
+        {/* <div className="flex flex-col ml-1 justify-center group items-center px-4  h-full  ">
           <Link to="/voicecall">
 
             <div
@@ -72,9 +72,9 @@ function Sidebar() {
               <span className="text-[14px] group-hover:text-blue-700 ">Call</span>
             </div>
           </Link>
-        </div>
+        </div> */}
 
-        <div className="flex flex-col  justify-center group items-center px-4  h-full  ">
+        {/* <div className="flex flex-col  justify-center group items-center px-4  h-full  ">
           <Link to="/contact">
             <div
               className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
@@ -105,10 +105,10 @@ function Sidebar() {
             </span>
             </div>
           </Link>
-        </div>
+        </div> */}
 
         <div className="flex flex-col  justify-center group items-center px-4  h-full  ">
-          <Link to="/videocall">
+          <Link to="/video">
             <div
               className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
               <div>

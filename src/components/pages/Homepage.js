@@ -10,8 +10,10 @@ import {
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
-import Login from "../layout/Login";
+ //import Login from "../layout/Login";
+import Login from "../Authentication/Login";
 import SignupForm from "../layout/SignupForm";
+import Landingpage from "./landingpage";
 
 function Homepage() {
   const navigate = useNavigate();
@@ -23,6 +25,8 @@ function Homepage() {
   }, []);
 
   return (
+    <div>
+    <Landingpage />
     <Container maxW="xl" centerContent>
       {/* <Box
           d="flex"
@@ -44,6 +48,7 @@ function Homepage() {
             ConVoBuzZ
           </Text> */}
       {/* </Box> */}
+    
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1em">
@@ -61,6 +66,7 @@ function Homepage() {
         </Tabs>
       </Box>
     </Container>
+    </div>
   );
 }
 
