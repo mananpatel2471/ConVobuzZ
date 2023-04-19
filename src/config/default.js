@@ -1,4 +1,4 @@
 
 export default {
-  SERVER_URL:"http://192.168.4.57:5000"
+  SERVER_URL:"http://3.87.131.240:5000"
 }

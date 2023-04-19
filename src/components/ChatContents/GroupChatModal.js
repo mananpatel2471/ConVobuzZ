@@ -163,9 +163,9 @@ const GroupChatModal = ({ children }) => {
               />
             </FormControl>
             <Box w="100%" d="flex" flexWrap="wrap">
-              {selectedUsers.map((u) => (
+              {selectedUsers.map((u,i) => (
                 <UserBadgeItem
-                  key={u._id}
+                  key={i}
                   user={u}
                   handleFunction={() => handleDelete(u)}
                 />
@@ -177,9 +177,9 @@ const GroupChatModal = ({ children }) => {
             ) : (
               searchResult
                 ?.slice(0, 4)
-                .map((user) => (
+                .map((user,i) => (
                   <UserListItem
-                    key={user._id}
+                    key={i}
                     user={user}
                     handleFunction={() => handleGroup(user)}
                   />
