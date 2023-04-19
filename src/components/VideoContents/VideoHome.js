@@ -25,7 +25,7 @@ const VideoHome = () => {
           {/* Main */}
           <div className=" flex flex-col items-center justify-center pb-8">
             <h1 className="text-[50px] md:text-[80px] text-[#303B69] font-bold pt-12">
-              ConVoBuzZ
+              ConVobuzZ
             </h1>
           </div>
 

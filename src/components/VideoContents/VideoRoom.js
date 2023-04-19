@@ -2,8 +2,10 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
+import {useNavigate} from "react-router";
 
-const VideoRoom = () => {
+const Room = () => {
+  const navigate=useNavigate();
   const { roomID } = useParams();
   const meeting = async (element) => {
     const appID = 946219318;
@@ -13,7 +15,7 @@ const VideoRoom = () => {
       serverSecret,
       roomID,
       Date.now().toString(),
-      " "
+      "Rishita"
     );
     const zp = ZegoUIKitPrebuilt.create(kitToken);
 
@@ -22,10 +24,13 @@ const VideoRoom = () => {
       scenario: {
         mode: ZegoUIKitPrebuilt.GroupCall,
       },
+      onLeaveRoom:()=>{
+        navigate("/video");
+      }
     });
   };
 
   return <div ref={meeting} style={{ width: "100vw", height: "100vh" }}></div>;
 };
 
-export default VideoRoom;
+export default Room;
