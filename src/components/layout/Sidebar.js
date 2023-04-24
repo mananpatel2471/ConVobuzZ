@@ -4,13 +4,13 @@ function Sidebar() {
   return (
     <>
       <div className="flex bg-[#93BFCF] items-center justify-center shadow-inner">
-        <div className="flex flex-col justify-center group items-center px-4   h-full">
+        <div className="flex flex-col justify-center group items-center px-2    h-full">
           <Link to="/notifications">
             <div
               className="border-b-2 group-hover:border-blue-700 border-transparent  flex gap-2 flex-col items-center justify-between py-2">
               <div>
                 <svg
-                  className="h-5 w-6 group-hover:text-blue-700 "
+                  className="h-5 w-5  group-hover:text-blue-700 "
                   viewBox="0 0 19 21"
                   fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ function Sidebar() {
               className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
               <div>
                 <svg
-                  className="h-5 w-6 group-hover:text-blue-700 "
+                  className="h-5 w-5 group-hover:text-blue-700 "
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -107,13 +107,13 @@ function Sidebar() {
           </Link>
         </div> */}
 
-        <div className="flex flex-col  justify-center group items-center px-4  h-full  ">
+        <div className="flex flex-col  justify-center group items-center px-2  h-full  ">
           <Link to="/video">
             <div
               className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
               <div>
                 <svg
-                  className="h-5 w-6 group-hover:text-blue-700"
+                  className="h-5 w-5 group-hover:text-blue-700"
                   viewBox="0 0 21 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -143,13 +143,13 @@ function Sidebar() {
           </Link>
         </div>
 
-        <div className="flex flex-col  justify-center group items-center px-4  h-full  ">
+        <div className="flex flex-col  justify-center group items-center px-2  h-full  ">
           <Link to="/calender">
             <div
               className="border-b-2 group-hover:border-blue-700 border-transparent  flex flex-col gap-2 items-center justify-between py-2">
               <div>
                 <svg
-                  className="h-5 w-6 group-hover:text-blue-700"
+                  className="h-5 w-5 group-hover:text-blue-700"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"

@@ -15,13 +15,13 @@ import config from "../../config/default";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "../ChatContents/UpdateGroupChatModal";
 import { ChatState } from "../../state/ChatProvider";
-import config from "../../config/default";
+import Picker from 'emoji-picker-react'
+
 
 const ENDPOINT = config.SERVER_URL;
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
-
   const SERVER_URL = config.SERVER_URL;
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -30,6 +30,15 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const [typing, setTyping] = useState(false);
   const [istyping, setIsTyping] = useState(false);
   const toast = useToast();
+  const [showPicker, setShowPicker] = useState(false);
+
+  const onEmojiClick = (emojiObject,event) => {
+    console.log(emojiObject);
+    console.log(event);
+    setNewMessage(prevInput => prevInput + emojiObject.emoji);
+    setShowPicker(false);
+  }
+  
 
   const defaultOptions = {
     loop: true,
@@ -55,7 +64,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-       SERVER_URL+ `/api/message/${selectedChat._id}`,
+        SERVER_URL + `/api/message/${selectedChat._id}`,
         config
       );
       setMessages(data);
@@ -85,8 +94,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
           },
         };
         setNewMessage("");
-        const { data } = await axios.post(SERVER_URL +
-          "/api/message",
+        const { data } = await axios.post(
+          SERVER_URL + "/api/message",
           {
             content: newMessage,
             chatId: selectedChat._id,
@@ -161,10 +170,18 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       }
     }, timerLength);
   };
+
+  
+  
  
-    return (
+    
+  
+    
+    
+    
+
+  return (
     <>
-      
       {selectedChat ? (
         <>
           <Text
@@ -186,7 +203,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
               (!selectedChat.isGroupChat ? (
                 <>
                   {getSender(user, selectedChat.users)}
-                  <ProfileModal
+                  <ProfileModal 
                     user={getSenderFull(user, selectedChat.users)}
                   />
                 </>
@@ -225,35 +242,48 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 <ScrollableChat messages={messages} />
               </div>
             )}
-
-            <FormControl
-              onKeyDown={sendMessage}
-              id="first-name"
-              isRequired
-              mt={3}
-            >
-              {istyping ? (
-                <div>
-                  {/* <Lottie
+          </Box>
+          <FormControl
+            onKeyDown={sendMessage}
+            id="first-name"
+            isRequired
+            mt={3}
+          >
+            {istyping ? (
+              <div>
+                {/* <Lottie
                     options={defaultOptions}
                     // height={50}
                     width={70}
                     style={{ marginBottom: 15, marginLeft: 0 }}
                   /> */}
-                </div>
-              ) : (
-                <></>
-              )}
-              <div>
+              </div>
+            ) : (
+              <></>
+            )}
+            <div>
               <Input
                 variant="filled"
                 bg="#E0E0E0"
                 placeholder="Enter a message.."
                 value={newMessage}
                 onChange={typingHandler}
-              /></div>
-            </FormControl>
-          </Box>
+              />
+            </div>
+            <div className="py-2">
+            <img 
+             className="rounded-lg hover:bg-slate-500"
+              src="./images/icons/Emoji.svg"
+              onClick={() => setShowPicker(val => !val)}
+              />
+              {
+                showPicker && <Picker pickerStyle={{width: '100%'}}
+                onEmojiClick={ onEmojiClick }/>
+              }
+            </div>
+            
+          </FormControl>
+
         </>
       ) : (
         // to get socket.io on same page

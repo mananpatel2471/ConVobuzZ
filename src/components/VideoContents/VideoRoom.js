@@ -15,14 +15,14 @@ const Room = () => {
       serverSecret,
       roomID,
       Date.now().toString(),
-      "Rishita"
+      " "
     );
     const zp = ZegoUIKitPrebuilt.create(kitToken);
 
     zp.joinRoom({
       container: element,
       scenario: {
-        mode: ZegoUIKitPrebuilt.GroupCall,
+        mode: ZegoUIKitPrebuilt.VideoConference,
       },
       onLeaveRoom:()=>{
         navigate("/video");
